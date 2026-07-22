@@ -1,8 +1,6 @@
 import Link from "next/link";
-import { caseStudies, growthExperiments, positioning } from "@/lib/projects";
+import { caseStudies, positioning } from "@/lib/projects";
 import { Boogie, Squares, accentBg } from "@/components/mondrian";
-
-const experimentDots = ["bg-m-yellow", "bg-m-red", "bg-m-blue", "bg-ink"];
 
 export default function Home() {
   return (
@@ -19,17 +17,27 @@ export default function Home() {
           <p className="mt-5 max-w-xl text-lg leading-relaxed opacity-80">
             {positioning.statement}
           </p>
-          <p className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-xs uppercase tracking-[0.18em]">
-            <span>Data</span>
-            <span aria-hidden className="h-2 w-2 bg-m-yellow" />
-            <span>Product</span>
-            <span aria-hidden className="h-2 w-2 bg-m-blue" />
-            <span>Creative</span>
-            <span aria-hidden className="h-2 w-2 bg-m-red" />
-            <span>Acquisition</span>
+          <p className="mt-3 max-w-xl leading-relaxed opacity-70">
+            {positioning.statement2}
           </p>
         </div>
         <Boogie className="mx-auto md:mx-0 md:justify-self-end" />
+      </section>
+
+      <section className="border-2 border-ink">
+        <div aria-hidden className="flex h-2 w-full">
+          <span className="w-1/3 bg-m-yellow" />
+          <span className="w-1/3 bg-m-blue" />
+          <span className="w-1/3 bg-m-red" />
+        </div>
+        <div className="p-6">
+          <p className="font-mono text-xs uppercase tracking-[0.22em] opacity-60">
+            How I work
+          </p>
+          <p className="mt-3 max-w-2xl leading-relaxed opacity-85">
+            {positioning.howIWork}
+          </p>
+        </div>
       </section>
 
       <section>
@@ -82,46 +90,6 @@ export default function Home() {
             </li>
           ))}
         </ul>
-      </section>
-
-      <section>
-        <div className="flex items-baseline justify-between border-b-[3px] border-ink pb-3">
-          <h2 className="font-serif text-2xl tracking-tight">
-            Selected growth experiments
-          </h2>
-          <span className="hidden font-mono text-xs uppercase tracking-[0.2em] opacity-60 sm:block">
-            Studies
-          </span>
-        </div>
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed opacity-70">
-          Smaller tests that didn&apos;t warrant a full case study — kept as
-          hypothesis → learning sketches.
-        </p>
-        <div className="mt-6 grid gap-[2px] border-2 border-ink bg-ink sm:grid-cols-2">
-          {growthExperiments.map((experiment, index) => (
-            <div key={experiment.title} className="bg-paper p-5 sm:p-6">
-              <div className="flex items-start justify-between gap-4">
-                <h3 className="font-serif text-lg leading-snug tracking-tight">
-                  {experiment.title}
-                </h3>
-                <span
-                  aria-hidden
-                  className={`mt-1.5 h-3 w-3 shrink-0 ${experimentDots[index % experimentDots.length]}`}
-                />
-              </div>
-              <dl className="mt-4 space-y-2 text-sm leading-relaxed">
-                {experiment.fields.map((field) => (
-                  <div key={field.label}>
-                    <dt className="inline font-mono text-[11px] uppercase tracking-wide opacity-60">
-                      {field.label} —{" "}
-                    </dt>
-                    <dd className="inline opacity-80">{field.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          ))}
-        </div>
       </section>
     </div>
   );
