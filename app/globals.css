@@ -1,22 +1,13 @@
 @import "tailwindcss";
 
-/* Gallery palette — warm paper by day, night gallery in dark mode */
+/* Night gallery — dark is the design, not a mode. */
 :root {
-  --paper: #faf6ee;
-  --ink: #181410;
-  --m-yellow: #f0c000;
-  --m-red: #dd3b27;
-  --m-blue: #2a56c6;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #14120f;
-    --ink: #ece5d8;
-    --m-yellow: #e8bf2a;
-    --m-red: #e04b36;
-    --m-blue: #4a6fe0;
-  }
+  color-scheme: dark;
+  --paper: #14120f;
+  --ink: #ece5d8;
+  --m-yellow: #e8bf2a;
+  --m-red: #e04b36;
+  --m-blue: #4a6fe0;
 }
 
 @theme inline {
