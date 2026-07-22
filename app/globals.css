@@ -1,19 +1,54 @@
 @import "tailwindcss";
 
+/* Gallery palette — warm paper by day, night gallery in dark mode */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #faf6ee;
+  --ink: #181410;
+  --m-yellow: #f0c000;
+  --m-red: #dd3b27;
+  --m-blue: #2a56c6;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --paper: #14120f;
+    --ink: #ece5d8;
+    --m-yellow: #e8bf2a;
+    --m-red: #e04b36;
+    --m-blue: #4a6fe0;
   }
 }
 
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-m-yellow: var(--m-yellow);
+  --color-m-red: var(--m-red);
+  --color-m-blue: var(--m-blue);
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+@keyframes block-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.block-pulse {
+  animation: block-pulse 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .block-pulse {
+    animation: none;
+  }
 }
