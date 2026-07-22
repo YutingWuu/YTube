@@ -35,10 +35,10 @@ export default function Home() {
       <section>
         <div className="flex items-baseline justify-between border-b-[3px] border-ink pb-3">
           <h2 className="font-serif text-2xl tracking-tight">
-            Selected case studies
+            My story, in three parts
           </h2>
           <span className="font-mono text-xs uppercase tracking-[0.2em] opacity-60">
-            01 — 03
+            Part 01 — 03
           </span>
         </div>
         <ul className="mt-6 divide-y-2 divide-ink border-2 border-ink">

@@ -111,7 +111,7 @@ export default async function CaseStudyPage({
           <div aria-hidden className={`h-2 w-full ${accent}`} />
           <div className="p-6">
             <p className="font-mono text-xs uppercase tracking-[0.22em] opacity-60">
-              Takeaway
+              What I learned
             </p>
             <p className="mt-3 font-serif text-xl italic leading-snug">
               {study.takeaway}
@@ -130,7 +130,7 @@ export default async function CaseStudyPage({
             <div className="flex items-center justify-between gap-4 p-5">
               <div>
                 <p className="font-mono text-xs uppercase tracking-[0.2em] opacity-60">
-                  Next story
+                  Next part
                 </p>
                 <p className="mt-1 font-serif text-lg leading-snug decoration-2 underline-offset-4 group-hover:underline">
                   {next.title}

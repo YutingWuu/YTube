@@ -12,7 +12,6 @@ export type CaseStudy = {
   title: string;
   subtitle: string;
   hook: string;
-  summary: string;
   skills: string[];
   accent: Accent;
   chapters: StoryChapter[];
@@ -53,159 +52,149 @@ export const careerStages: {
   },
 ];
 
+/*
+ * All stories are anonymized and reconstructed — no company, customer,
+ * or internal system details. Told first-person, STAR-shaped.
+ */
 export const caseStudies: CaseStudy[] = [
   {
     slug: "crm-sales-analytics",
-    title: "Building a CRM and Sales Analytics Foundation",
-    subtitle: "Case Study 1",
-    hook: "Before the growth story could start, someone had to make the numbers trustworthy.",
-    summary:
-      "Configured CRM deal management and sales processes, then built the ETL, SQL analysis, and reporting layer that gave leadership visibility into sales performance.",
+    title: "Making the Sales Numbers Trustworthy",
+    subtitle: "Part 1",
+    hook: "My first big project wasn't glamorous: nobody fully trusted the sales numbers, and someone had to fix that.",
     skills: ["Data", "Business Systems", "Analytics"],
     accent: "yellow",
     chapters: [
       {
-        label: "The starting point",
-        headline: "Growth questions can't be answered from a messy CRM.",
-        body: "I began where every growth system begins — configuring HubSpot deal management and a sales process the team would actually follow, so every deal left a clean data trail.",
-        details: {
-          title: "What I set up",
-          bullets: [
-            "HubSpot deal management configuration",
-            "Sales process and pipeline design",
-          ],
-        },
+        label: "Situation",
+        headline:
+          "Deals were tracked inconsistently, and reporting was mostly manual.",
+        body: "Basic questions like “how is each team actually doing?” took real effort to answer, and different people would get different answers. Before anyone could talk about growth, the basics had to work.",
       },
       {
-        label: "The plumbing",
-        headline: "Data is only useful after someone cleans it.",
-        body: "Behind every dashboard was the unglamorous work: ETL pipelines, data cleaning, and validation checks that caught problems before leadership ever saw a wrong number.",
+        label: "Task",
+        headline: "My job was to fix the foundation.",
+        body: "Set up the CRM properly, clean up the data, and give leadership reporting they could actually rely on.",
+      },
+      {
+        label: "Action",
+        headline: "So I rebuilt it piece by piece.",
+        body: "I configured deal management and the sales process in the CRM so every deal left a clean trail. Then I built the ETL and cleaning steps, added validation checks to catch bad data early, and wrote SQL to compare how different teams were performing.",
         details: {
-          title: "The unglamorous work",
+          title: "The specifics",
           bullets: [
+            "CRM deal management and sales process configuration",
             "ETL and data cleaning",
-            "Data quality and validation processes",
+            "Data quality and validation checks",
+            "SQL analysis of sales performance across teams",
           ],
         },
       },
       {
-        label: "The payoff",
-        headline: "From raw deals to decisions leadership could read.",
-        body: "With a trustworthy base in place, I used SQL to compare sales performance across teams and turned the answers into dashboards and reporting that leadership actually used.",
+        label: "Result",
+        headline:
+          "Leadership got dashboards they actually used — built on numbers I could stand behind.",
+        body: "Reporting went from manual and debatable to something people could open and trust. And I picked up a habit I've kept ever since: never build anything on data you haven't verified yourself.",
         details: {
           title: "What it produced",
           bullets: [
-            "SQL analysis of sales performance across teams",
-            "Dashboards and leadership reporting",
+            "Dashboards and recurring leadership reporting",
+            "A shared, verified view of team-level sales performance",
           ],
         },
       },
     ],
     takeaway:
-      "Data, business systems, and analytics — the foundation everything that follows was built on.",
+      "Everything I've done since — product work, growth work — started here, with learning to make data trustworthy before using it.",
   },
   {
     slug: "ai-sms-analytics",
-    title: "Improving an AI-Powered SMS Experience Through Product Analytics",
-    subtitle: "Case Study 2",
-    hook: "The users were already telling us what was broken — in thousands of text messages.",
-    summary:
-      "Used SQL and user-journey mapping to separate data bugs, technical bugs, and experience issues in an AI SMS product, then partnered with engineering to fix them.",
+    title: "Figuring Out What Users Were Really Telling Our AI",
+    subtitle: "Part 2",
+    hook: "Next, I moved to the product side. Users were texting with our AI every day, and my job was to figure out what they were actually trying to say.",
     skills: ["Product", "AI", "User Journey", "Cross-functional"],
     accent: "blue",
     chapters: [
       {
-        label: "Listening to the signal",
-        headline: "Every reply is a user telling you something.",
-        body: "I used SQL to monitor SMS delivery, replies, and anomalies, then dug into the keywords and conversation behavior inside them — the closest thing an SMS product has to a continuous user interview.",
-        details: {
-          title: "What I watched",
-          bullets: [
-            "SQL monitoring of SMS delivery, replies, and anomalies",
-            "User keyword and conversation behavior analysis",
-          ],
-        },
+        label: "Situation",
+        headline:
+          "We had an AI texting with users daily — and a lot of noise about what was “broken.”",
+        body: "Some conversations went wrong. But “it's broken” could mean three very different things: a data problem, a technical bug, or a user experience issue. Fixing the wrong one wastes everyone's time.",
       },
       {
-        label: "The detective work",
-        headline: "Data bug, technical bug, or experience problem?",
-        body: "The same broken conversation can have three different causes — and each one needs a different owner and a different fix. I learned to tell them apart before anything got “fixed.”",
-        details: {
-          title: "How I triaged",
-          bullets: [
-            "Distinguishing data bugs from technical bugs from experience issues",
-          ],
-        },
+        label: "Task",
+        headline:
+          "Figure out what was actually wrong, and get the right fix to the right team.",
+        body: "I was the person between the raw conversation data and the engineers — the one who had to turn “something feels off” into “here's the problem, here's the evidence, here's what to change.”",
       },
       {
-        label: "From diagnosis to design",
-        headline: "Then I mapped the whole journey and wrote the fix.",
-        body: "I built user flow diagrams and system maps, wrote product requirements, and worked with engineering to ship improvements — covering the full path from website CTA into the SMS conversation.",
+        label: "Action",
+        headline: "I basically lived in the conversation data.",
+        body: "I monitored delivery, replies, and anomalies in SQL, and read what users were actually writing — the keywords, the drop-off points, the moments where they got confused. Then I sorted every issue into data bug, technical bug, or experience problem, mapped the journey from website click to SMS conversation, and wrote up requirements engineering could act on.",
         details: {
-          title: "What shipped from it",
+          title: "The specifics",
           bullets: [
+            "SQL monitoring of message delivery, replies, and anomalies",
+            "Keyword and conversation behavior analysis",
+            "Issue triage: data bug vs. technical bug vs. experience problem",
             "User flow diagrams and system mapping",
-            "Product requirements for engineering",
-            "Cross-functional work with the engineering team",
-            "Full-path mapping: website CTA → SMS experience",
+            "Product requirements, worked through with engineering",
           ],
         },
+      },
+      {
+        label: "Result",
+        headline: "Triage stopped being guesswork.",
+        body: "Issues went to the right owner with evidence attached instead of bouncing between teams, and improvements shipped with engineering. The full path — from the website's call-to-action into the SMS experience — finally existed as one documented journey instead of tribal knowledge.",
       },
     ],
     takeaway:
-      "Product, AI, user journey, cross-functional — analytics that ends in shipped changes, not slides.",
+      "Users tell you what's wrong every single day. You just have to be the person who actually reads it — and translates it into something a team can act on.",
   },
   {
     slug: "growth-creative-testing",
-    title: "Building a Multi-Channel Growth Engine for Caregiver Acquisition",
-    subtitle: "Case Study 3",
-    hook: "One goal, four channels, and a product that changed under our feet.",
-    summary:
-      "Owned creative production, channel strategy, and measurement for caregiver acquisition — then adapted the same system when the product shifted toward an AI-agent social audience.",
+    title: "Running Growth Across Channels While the Product Kept Changing",
+    subtitle: "Part 3",
+    hook: "Then I moved to the front of the funnel: ads, creative, and channels — with a small team, a real budget, and a product that changed direction mid-way.",
     skills: ["Growth", "Creative", "Channel Strategy", "Experimentation"],
     accent: "red",
     chapters: [
       {
-        label: "The mission",
-        headline: "Acquire qualified caregivers — and get them talking to the AI.",
-        body: "The goal was to acquire qualified caregivers and move them from paid channels into an AI-powered SMS experience. Everything below served that one sentence.",
+        label: "Situation",
+        headline:
+          "We needed more of the right users, and there weren't many of us to get them.",
+        body: "The goal was to bring qualified users in from paid channels and get them into our AI-powered SMS experience. Small team, limited budget — so speed and judgment mattered more than headcount.",
       },
       {
-        label: "The creative engine",
-        headline: "AI tools turned a small team into a fast one.",
-        body: "I used AI tools to produce short-form video, visual assets, and ad copy — writing the scripts and messaging myself — so we could test urgent-hiring, brand, and product-education angles at a pace a small team couldn't otherwise afford.",
+        label: "Task",
+        headline:
+          "I owned the acquisition side: creative, channels, and the funnel.",
+        body: "Not just running the ads — deciding what to say, where to say it, and how to tell whether it was actually working.",
+      },
+      {
+        label: "Action",
+        headline:
+          "I used AI tools to move fast, and treated every ad as a test.",
+        body: "I produced short videos, images, and copy with AI tools — writing the scripts and messaging myself — so we could test different angles: urgency, brand introduction, product education. And I matched each channel to what it's good at: Meta and Instagram for scale, Google for people already searching, LinkedIn for the professional side.",
         details: {
-          title: "Inside the engine",
+          title: "The specifics",
           bullets: [
             "AI-generated short-form videos and images",
             "Ad scripts and copy written by me",
-            "Angles tested: urgent hiring, brand introduction, product education",
+            "Message angles tested: urgency, brand, product education",
             "Format and length adapted per platform",
+            "Channel mix: Meta / Instagram / Google / LinkedIn, each with its own job",
           ],
         },
       },
       {
-        label: "The map",
-        headline: "Channels aren't a list — they're a fit problem.",
-        body: "Meta and Instagram carried caregiver acquisition at scale, Google caught people actively searching for the job, LinkedIn held the professional brand line. The mix was a choice, re-made whenever the product or the audience moved.",
+        label: "Result",
+        headline: "Cheap leads weren't always good leads.",
+        body: "Urgency-led creative won on cost per lead; brand-led creative brought fewer but better-informed users. So instead of chasing the lowest CPL, I learned to weigh volume against downstream quality — opt-in rates, engagement, how leads behaved after they arrived.",
         details: {
-          title: "Who did what",
+          title: "What I tracked",
           bullets: [
-            "Meta & Instagram — caregiver acquisition at scale",
-            "Google — active job-search intent",
-            "X — the AI-agent social audience, later in the story",
-            "LinkedIn — brand content and professional communication",
-          ],
-        },
-      },
-      {
-        label: "The scoreboard",
-        headline: "CPL tells you the cost. It doesn't tell you the truth.",
-        body: "Urgent-hiring creative brought more leads at a lower cost; brand creative brought fewer but better-informed users. I optimized for the balance of volume and downstream lead quality — not CPL alone.",
-        details: {
-          title: "What I measured",
-          bullets: [
-            "CPL, CTR, and conversion rate",
+            "CPL, CTR, conversion rate",
             "Lead quality and opt-in rate",
             "Downstream engagement",
             "Channel-level performance",
@@ -213,13 +202,14 @@ export const caseStudies: CaseStudy[] = [
         },
       },
       {
-        label: "The pivot",
-        headline: "Then the product changed — so the growth system changed with it.",
-        body: "When the company moved toward an AI-agent social product, I shifted acquisition and content effort to X, where that audience actually lives, and supported LinkedIn content for professional positioning. It's early — the honest wins so far are channel selection, audience fit, and creative iteration speed, not hard numbers.",
+        label: "The plot twist",
+        headline:
+          "Mid-way, the product changed direction — so I changed the playbook.",
+        body: "The company shifted toward an AI-agent social product, which meant a different audience in a different place. I moved more of our effort to X, where that audience actually spends time, and supported LinkedIn content for professional positioning. It's still early — I won't dress it up with numbers it doesn't have yet. The honest win was speed: when the ground shifted, the growth system shifted with it.",
       },
     ],
     takeaway:
-      "Growth isn't a channel list. It's a system that keeps answering the same question — “where are our users?” — as the answer changes.",
+      "Growth work, to me, is re-asking the same question — “where are our users, and what do they need to hear?” — every time the answer changes.",
   },
 ];
 
@@ -231,7 +221,7 @@ export type GrowthExperiment = {
 // Frameworks only — fill in the real hypothesis, channel, and result for each.
 export const growthExperiments: GrowthExperiment[] = [
   {
-    title: "Urgent Hiring vs. Brand Education",
+    title: "Urgency vs. Brand Education",
     fields: [
       { label: "Hypothesis", value: "Add: what you expected before running this test" },
       { label: "Channel", value: "Add: where this ran" },
@@ -258,7 +248,7 @@ export const growthExperiments: GrowthExperiment[] = [
     ],
   },
   {
-    title: "Job Search vs. Direct Acquisition",
+    title: "Search Intent vs. Direct Acquisition",
     fields: [
       { label: "Acquisition path", value: "Add: how each path reached the user" },
       { label: "Opt-in behavior", value: "Add: how behavior differed between paths" },
