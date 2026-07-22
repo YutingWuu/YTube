@@ -61,8 +61,11 @@ export default function Home() {
                   <h3 className="font-serif text-xl leading-snug tracking-tight decoration-2 underline-offset-4 group-hover:underline">
                     {project.title}
                   </h3>
-                  <p className="mt-2 max-w-2xl text-sm leading-relaxed opacity-75">
-                    {project.summary}
+                  <p className="mt-2 max-w-2xl font-serif italic leading-snug opacity-80">
+                    {project.hook}
+                  </p>
+                  <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.18em] opacity-50">
+                    A story in {project.chapters.length} chapters →
                   </p>
                   <div className="mt-4 flex flex-wrap gap-2 font-mono text-[11px] uppercase tracking-wide">
                     {project.skills.map((skill) => (

@@ -1,19 +1,22 @@
 export type Accent = "yellow" | "red" | "blue";
 
-export type CaseStudySection = {
-  heading: string;
-  paragraphs?: string[];
-  bullets?: string[];
+export type StoryChapter = {
+  label: string;
+  headline: string;
+  body: string;
+  details?: { title: string; bullets: string[] };
 };
 
 export type CaseStudy = {
   slug: string;
   title: string;
   subtitle: string;
+  hook: string;
   summary: string;
   skills: string[];
   accent: Accent;
-  sections: CaseStudySection[];
+  chapters: StoryChapter[];
+  takeaway: string;
 };
 
 export const positioning = {
@@ -55,98 +58,168 @@ export const caseStudies: CaseStudy[] = [
     slug: "crm-sales-analytics",
     title: "Building a CRM and Sales Analytics Foundation",
     subtitle: "Case Study 1",
+    hook: "Before the growth story could start, someone had to make the numbers trustworthy.",
     summary:
       "Configured CRM deal management and sales processes, then built the ETL, SQL analysis, and reporting layer that gave leadership visibility into sales performance.",
     skills: ["Data", "Business Systems", "Analytics"],
     accent: "yellow",
-    sections: [
+    chapters: [
       {
-        heading: "What I built",
-        bullets: [
-          "HubSpot deal management and sales process configuration",
-          "ETL and data cleaning",
-          "SQL analysis of sales performance across teams",
-          "Dashboards and leadership reporting",
-          "Data quality and validation processes",
-        ],
+        label: "The starting point",
+        headline: "Growth questions can't be answered from a messy CRM.",
+        body: "I began where every growth system begins — configuring HubSpot deal management and a sales process the team would actually follow, so every deal left a clean data trail.",
+        details: {
+          title: "What I set up",
+          bullets: [
+            "HubSpot deal management configuration",
+            "Sales process and pipeline design",
+          ],
+        },
       },
       {
-        heading: "What this demonstrates",
-        paragraphs: [
-          "This project shows data, business systems, and analytics capability — the foundation the rest of my growth work is built on.",
-        ],
+        label: "The plumbing",
+        headline: "Data is only useful after someone cleans it.",
+        body: "Behind every dashboard was the unglamorous work: ETL pipelines, data cleaning, and validation checks that caught problems before leadership ever saw a wrong number.",
+        details: {
+          title: "The unglamorous work",
+          bullets: [
+            "ETL and data cleaning",
+            "Data quality and validation processes",
+          ],
+        },
+      },
+      {
+        label: "The payoff",
+        headline: "From raw deals to decisions leadership could read.",
+        body: "With a trustworthy base in place, I used SQL to compare sales performance across teams and turned the answers into dashboards and reporting that leadership actually used.",
+        details: {
+          title: "What it produced",
+          bullets: [
+            "SQL analysis of sales performance across teams",
+            "Dashboards and leadership reporting",
+          ],
+        },
       },
     ],
+    takeaway:
+      "Data, business systems, and analytics — the foundation everything that follows was built on.",
   },
   {
     slug: "ai-sms-analytics",
     title: "Improving an AI-Powered SMS Experience Through Product Analytics",
     subtitle: "Case Study 2",
+    hook: "The users were already telling us what was broken — in thousands of text messages.",
     summary:
       "Used SQL and user-journey mapping to separate data bugs, technical bugs, and experience issues in an AI SMS product, then partnered with engineering to fix them.",
     skills: ["Product", "AI", "User Journey", "Cross-functional"],
     accent: "blue",
-    sections: [
+    chapters: [
       {
-        heading: "What I did",
-        bullets: [
-          "Used SQL to monitor SMS delivery, replies, and anomalies",
-          "Analyzed user keywords and conversation behavior",
-          "Distinguished between data bugs, technical bugs, and experience issues",
-          "Built user flow diagrams, system mapping, and product requirements",
-          "Partnered with engineering to improve the product",
-          "Mapped the full path from website CTA to the SMS experience",
-        ],
+        label: "Listening to the signal",
+        headline: "Every reply is a user telling you something.",
+        body: "I used SQL to monitor SMS delivery, replies, and anomalies, then dug into the keywords and conversation behavior inside them — the closest thing an SMS product has to a continuous user interview.",
+        details: {
+          title: "What I watched",
+          bullets: [
+            "SQL monitoring of SMS delivery, replies, and anomalies",
+            "User keyword and conversation behavior analysis",
+          ],
+        },
       },
       {
-        heading: "What this demonstrates",
-        paragraphs: [
-          "This project shows product, AI, user journey, and cross-functional capability.",
-        ],
+        label: "The detective work",
+        headline: "Data bug, technical bug, or experience problem?",
+        body: "The same broken conversation can have three different causes — and each one needs a different owner and a different fix. I learned to tell them apart before anything got “fixed.”",
+        details: {
+          title: "How I triaged",
+          bullets: [
+            "Distinguishing data bugs from technical bugs from experience issues",
+          ],
+        },
+      },
+      {
+        label: "From diagnosis to design",
+        headline: "Then I mapped the whole journey and wrote the fix.",
+        body: "I built user flow diagrams and system maps, wrote product requirements, and worked with engineering to ship improvements — covering the full path from website CTA into the SMS conversation.",
+        details: {
+          title: "What shipped from it",
+          bullets: [
+            "User flow diagrams and system mapping",
+            "Product requirements for engineering",
+            "Cross-functional work with the engineering team",
+            "Full-path mapping: website CTA → SMS experience",
+          ],
+        },
       },
     ],
+    takeaway:
+      "Product, AI, user journey, cross-functional — analytics that ends in shipped changes, not slides.",
   },
   {
     slug: "growth-creative-testing",
     title: "Building a Multi-Channel Growth Engine for Caregiver Acquisition",
     subtitle: "Case Study 3",
+    hook: "One goal, four channels, and a product that changed under our feet.",
     summary:
       "Owned creative production, channel strategy, and measurement for caregiver acquisition — then adapted the same system when the product shifted toward an AI-agent social audience.",
     skills: ["Growth", "Creative", "Channel Strategy", "Experimentation"],
     accent: "red",
-    sections: [
+    chapters: [
       {
-        heading: "1. Growth objective",
-        paragraphs: [
-          "The goal was to acquire qualified caregivers and move them from paid channels into an AI-powered SMS experience.",
-        ],
+        label: "The mission",
+        headline: "Acquire qualified caregivers — and get them talking to the AI.",
+        body: "The goal was to acquire qualified caregivers and move them from paid channels into an AI-powered SMS experience. Everything below served that one sentence.",
       },
       {
-        heading: "2. Creative production",
-        paragraphs: [
-          "To increase testing velocity with a small team, I used AI tools to produce short-form videos, visual assets, and ad copy. I wrote ad scripts and messaging myself, and tested different angles — urgent hiring, brand introduction, and product education — adapting format and length to each platform.",
-        ],
+        label: "The creative engine",
+        headline: "AI tools turned a small team into a fast one.",
+        body: "I used AI tools to produce short-form video, visual assets, and ad copy — writing the scripts and messaging myself — so we could test urgent-hiring, brand, and product-education angles at a pace a small team couldn't otherwise afford.",
+        details: {
+          title: "Inside the engine",
+          bullets: [
+            "AI-generated short-form videos and images",
+            "Ad scripts and copy written by me",
+            "Angles tested: urgent hiring, brand introduction, product education",
+            "Format and length adapted per platform",
+          ],
+        },
       },
       {
-        heading: "3. Channel strategy",
-        paragraphs: [
-          "The goal was not to run on as many platforms as possible — it was to match each channel to the product, user, and business stage. Meta and Instagram carried the bulk of caregiver acquisition at scale, and Google captured users actively searching for the job. As the business shifted, I adjusted the channel mix: Meta and Google remained effective for caregiver acquisition, while X became more relevant once the product moved toward an AI-agent and social audience. LinkedIn supported brand content and professional-audience communication throughout.",
-        ],
+        label: "The map",
+        headline: "Channels aren't a list — they're a fit problem.",
+        body: "Meta and Instagram carried caregiver acquisition at scale, Google caught people actively searching for the job, LinkedIn held the professional brand line. The mix was a choice, re-made whenever the product or the audience moved.",
+        details: {
+          title: "Who did what",
+          bullets: [
+            "Meta & Instagram — caregiver acquisition at scale",
+            "Google — active job-search intent",
+            "X — the AI-agent social audience, later in the story",
+            "LinkedIn — brand content and professional communication",
+          ],
+        },
       },
       {
-        heading: "4. Measurement and decisions",
-        paragraphs: [
-          "I tracked CPL, CTR, conversion rate, lead quality, opt-in rate, downstream engagement, and channel-level performance. The urgent-hiring creative generated more leads at a lower cost, while brand-focused creative produced fewer but more informed users. Rather than optimizing for CPL alone, I balanced volume against downstream lead quality when deciding what to scale.",
-        ],
+        label: "The scoreboard",
+        headline: "CPL tells you the cost. It doesn't tell you the truth.",
+        body: "Urgent-hiring creative brought more leads at a lower cost; brand creative brought fewer but better-informed users. I optimized for the balance of volume and downstream lead quality — not CPL alone.",
+        details: {
+          title: "What I measured",
+          bullets: [
+            "CPL, CTR, and conversion rate",
+            "Lead quality and opt-in rate",
+            "Downstream engagement",
+            "Channel-level performance",
+          ],
+        },
       },
       {
-        heading: "Adapting the growth strategy to a new product",
-        paragraphs: [
-          "When the company shifted toward an AI-agent social product, I moved more of our acquisition and content effort to X, where the target audience was more active, and supported LinkedIn content design to strengthen professional positioning and brand awareness.",
-          "This section is intentionally framed around channel selection, audience fit, creative iteration, and early learning rather than hard metrics — the initiative is still early, and results here haven't matured enough to report with confidence.",
-        ],
+        label: "The pivot",
+        headline: "Then the product changed — so the growth system changed with it.",
+        body: "When the company moved toward an AI-agent social product, I shifted acquisition and content effort to X, where that audience actually lives, and supported LinkedIn content for professional positioning. It's early — the honest wins so far are channel selection, audience fit, and creative iteration speed, not hard numbers.",
       },
     ],
+    takeaway:
+      "Growth isn't a channel list. It's a system that keeps answering the same question — “where are our users?” — as the answer changes.",
   },
 ];
 
