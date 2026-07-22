@@ -1,3 +1,5 @@
+export type Accent = "yellow" | "red" | "blue";
+
 export type CaseStudySection = {
   heading: string;
   paragraphs?: string[];
@@ -10,6 +12,7 @@ export type CaseStudy = {
   subtitle: string;
   summary: string;
   skills: string[];
+  accent: Accent;
   sections: CaseStudySection[];
 };
 
@@ -19,23 +22,31 @@ export const positioning = {
     "I build and optimize growth systems across data, product, creative, and acquisition channels.",
 };
 
-export const careerStages = [
+export const careerStages: {
+  stage: string;
+  title: string;
+  description: string;
+  accent: Accent;
+}[] = [
   {
     stage: "Stage 1",
     title: "Building the Data Foundation",
     description: "CRM, ETL, SQL, dashboards.",
+    accent: "yellow",
   },
   {
     stage: "Stage 2",
     title: "Optimizing an AI Product",
     description:
       "SMS data analysis, bug triage, user journeys, product design.",
+    accent: "blue",
   },
   {
     stage: "Stage 3",
     title: "Driving Growth",
     description:
       "Ad creative, channel strategy, website funnel, acquisition, and experiments.",
+    accent: "red",
   },
 ];
 
@@ -47,6 +58,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Configured CRM deal management and sales processes, then built the ETL, SQL analysis, and reporting layer that gave leadership visibility into sales performance.",
     skills: ["Data", "Business Systems", "Analytics"],
+    accent: "yellow",
     sections: [
       {
         heading: "What I built",
@@ -73,6 +85,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Used SQL and user-journey mapping to separate data bugs, technical bugs, and experience issues in an AI SMS product, then partnered with engineering to fix them.",
     skills: ["Product", "AI", "User Journey", "Cross-functional"],
+    accent: "blue",
     sections: [
       {
         heading: "What I did",
@@ -100,6 +113,7 @@ export const caseStudies: CaseStudy[] = [
     summary:
       "Owned creative production, channel strategy, and measurement for caregiver acquisition — then adapted the same system when the product shifted toward an AI-agent social audience.",
     skills: ["Growth", "Creative", "Channel Strategy", "Experimentation"],
+    accent: "red",
     sections: [
       {
         heading: "1. Growth objective",
