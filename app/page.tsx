@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { positioning } from "@/lib/projects";
+import { withBasePath } from "@/lib/site";
 
 type ReelCard = {
   frame: string;
@@ -180,13 +180,12 @@ export default function Home() {
   return (
     <div className="bg-[var(--site-bg)] text-white">
       <section className="relative isolate min-h-screen overflow-hidden">
-        <Image
-          src="/welcome-world-field.png"
+        {/* Static export on GitHub Pages needs a literal base-path-aware image URL. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={withBasePath("/welcome-world-field.png")}
           alt="Wide Grand Teton field and mountain background"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,6,8,0.38)_0%,rgba(4,6,8,0.2)_26%,rgba(4,6,8,0.12)_52%,rgba(4,6,8,0.7)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_38%,rgba(255,255,255,0.15),transparent_34%)]" />
