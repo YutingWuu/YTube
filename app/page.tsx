@@ -30,32 +30,32 @@ type AspectPanel = {
 const reelCards: ReelCard[] = [
   {
     frame: "01",
-    title: "Work",
-    subtitle: "systems, strategy, and things I build",
+    title: "Order",
+    subtitle: "the systems and rituals that make life feel steady",
     href: "#work",
   },
   {
     frame: "02",
-    title: "Field Notes",
-    subtitle: "mountains, weather, and open roads",
+    title: "Field",
+    subtitle: "open grass, distance, and the calm of wide air",
     href: "#field-notes",
   },
   {
     frame: "03",
-    title: "Soundtrack",
-    subtitle: "songs that score the scene",
+    title: "Sound",
+    subtitle: "the songs and scenes that keep the world moving",
     href: "#soundtrack",
   },
   {
     frame: "04",
-    title: "Everyday",
-    subtitle: "small rituals and frames I keep",
+    title: "Routine",
+    subtitle: "the private patterns that make life predictable",
     href: "#everyday",
   },
   {
     frame: "05",
-    title: "Timeline",
-    subtitle: "the path underneath the landscape",
+    title: "Path",
+    subtitle: "the timeline under everything else",
     href: "#timeline",
   },
 ];
@@ -63,32 +63,32 @@ const reelCards: ReelCard[] = [
 const moodCards: ReelCard[] = [
   {
     frame: "A",
-    title: "wide air",
-    subtitle: "the part of life that feels bigger than me",
+    title: "wide light",
+    subtitle: "a world that feels larger than the day itself",
     href: "#field-notes",
   },
   {
     frame: "B",
-    title: "late drives",
-    subtitle: "music, weather, and the road after dark",
-    href: "#soundtrack",
-  },
-  {
-    frame: "C",
-    title: "quiet systems",
-    subtitle: "structure behind the visible work",
-    href: "#work",
-  },
-  {
-    frame: "D",
-    title: "small rituals",
-    subtitle: "the everyday scenes that make memory",
+    title: "house rules",
+    subtitle: "stability, rhythm, and self-made order",
     href: "#everyday",
   },
   {
+    frame: "C",
+    title: "ideal weather",
+    subtitle: "quiet optimism and a horizon to move toward",
+    href: "#soundtrack",
+  },
+  {
+    frame: "D",
+    title: "work map",
+    subtitle: "where structure turns into real systems",
+    href: "#work",
+  },
+  {
     frame: "E",
-    title: "origin story",
-    subtitle: "the chapters that led here",
+    title: "long future",
+    subtitle: "the chapters that keep opening outward",
     href: "#timeline",
   },
 ];
@@ -97,10 +97,10 @@ const lifePanels: AspectPanel[] = [
   {
     id: "work",
     frame: "01",
-    eyebrow: "Work",
-    title: "Ideas feel most alive to me once they touch a real system.",
+    eyebrow: "Order",
+    title: "I like lives that feel wide, but never directionless.",
     description:
-      `${positioning.statement} This is the part of my world built from growth, product, analytics, and experiments that have to move in real life, not just on slides.`,
+      `${positioning.statement} I care about systems, growth, and product work because they let me make something complex feel clear, calm, and usable.`,
     chips: ["Case studies", "Growth systems", "Product thinking"],
     className: "lg:col-span-7",
     glowClassName:
@@ -117,50 +117,46 @@ const lifePanels: AspectPanel[] = [
   {
     id: "field-notes",
     frame: "02",
-    eyebrow: "Field Notes",
-    title: "The landscape is not decoration - it is part of how I think.",
+    eyebrow: "Field",
+    title: "The world I want is grassy, open, wind-lit, and unhurried.",
     description:
-      "Mountains, wind, cloud lines, empty roads, and the feeling of being placed inside a world much larger than the day I am having. This is the scale reset I keep returning to.",
-    chips: ["Mountains", "Weather", "Perspective"],
+      "Big sky, quiet tree lines, one distant house, evening light, and enough space to hear yourself think. The landscape is not only a mood; it is the emotional architecture underneath everything else.",
+    chips: ["Grassland", "Tree line", "Evening air"],
     className: "lg:col-span-5",
     glowClassName:
-      "from-sky-300/12 via-transparent to-transparent lg:bg-[radial-gradient(circle_at_top_right,_rgba(164,202,255,0.18),_transparent_56%)]",
-    primaryLink: {
-      href: "/about/",
-      label: "Read the background",
-    },
+      "from-slate-200/10 via-transparent to-transparent lg:bg-[radial-gradient(circle_at_top_right,_rgba(203,213,225,0.18),_transparent_56%)]",
   },
   {
     id: "soundtrack",
     frame: "03",
-    eyebrow: "Soundtrack",
-    title: "Some memories arrive first as sound before they become images.",
+    eyebrow: "Sound",
+    title: "Idealism needs atmosphere, not just plans.",
     description:
-      "Concert energy, synth-pop glow, songs on repeat while the road keeps moving - this is the layer that changes mood into atmosphere and turns a week into a scene.",
-    chips: ["Concert nights", "Looped songs", "Night drives"],
+      "Music, night air, slow drives, and scenes that feel slightly cinematic keep the practical parts of life from becoming flat. This is where longing and momentum meet.",
+    chips: ["Concert nights", "Night drives", "Idealism"],
     className: "lg:col-span-5",
     glowClassName:
-      "from-fuchsia-200/10 via-transparent to-transparent lg:bg-[radial-gradient(circle_at_top_left,_rgba(255,193,232,0.16),_transparent_54%)]",
+      "from-zinc-200/8 via-transparent to-transparent lg:bg-[radial-gradient(circle_at_top_left,_rgba(228,228,231,0.14),_transparent_54%)]",
   },
   {
     id: "everyday",
     frame: "04",
-    eyebrow: "Everyday Frames",
-    title: "I like the tiny scenes that only look cinematic once they are gone.",
+    eyebrow: "Routine",
+    title: "Predictability, to me, is not boring. It is a form of peace.",
     description:
-      "Coffee, films, notes to self, camera-roll fragments, light on a window, the stretch of a quiet afternoon - the ordinary details that end up carrying the strongest emotional weight.",
-    chips: ["Films", "Rituals", "Camera roll"],
+      "I like repeated mornings, ordered rooms, familiar routes, and small rituals that make the future feel legible. The house in this world is quiet because its rhythms are already known.",
+    chips: ["Rules", "Rhythm", "Private order"],
     className: "lg:col-span-7",
     glowClassName:
-      "from-amber-100/10 via-transparent to-transparent lg:bg-[radial-gradient(circle_at_bottom_right,_rgba(255,225,173,0.16),_transparent_60%)]",
+      "from-stone-200/8 via-transparent to-transparent lg:bg-[radial-gradient(circle_at_bottom_right,_rgba(231,229,228,0.14),_transparent_60%)]",
   },
   {
     id: "timeline",
     frame: "05",
-    eyebrow: "Timeline",
-    title: "Under the dreamier surface, there is still a very real path.",
+    eyebrow: "Path",
+    title: "Under the moodboard, there is still a very real life in motion.",
     description:
-      "The formal pages still live here too: where I have worked, what I have built, and the sequence of chapters that brought all of these different parts of life into one place.",
+      "The formal pages still matter: where I have worked, what I have built, and the sequence of decisions that made this world possible in the first place.",
     chips: ["Resume", "Background", "Next chapter"],
     className: "lg:col-span-12",
     glowClassName:
@@ -178,63 +174,103 @@ const lifePanels: AspectPanel[] = [
 
 export default function Home() {
   return (
-    <div className="bg-[var(--site-bg)] text-white">
-      <section className="relative isolate min-h-screen overflow-hidden">
-        {/* Static export on GitHub Pages needs a literal base-path-aware image URL. */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={withBasePath("/welcome-world-field.png")}
-          alt="Wide Grand Teton field and mountain background"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+    <div className="bg-[linear-gradient(180deg,#07090c_0%,#0d1014_18%,#2a2d31_54%,#0a0d11_100%)] text-white">
+      <section className="relative overflow-hidden px-5 pb-16 pt-24 sm:px-8 sm:pt-28 lg:px-10">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 h-[38rem] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_52%)]"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,6,8,0.38)_0%,rgba(4,6,8,0.2)_26%,rgba(4,6,8,0.12)_52%,rgba(4,6,8,0.7)_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_38%,rgba(255,255,255,0.15),transparent_34%)]" />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-[20rem] h-56 bg-[linear-gradient(180deg,rgba(164,164,164,0.08),rgba(164,164,164,0))]"
+        />
 
-        <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-start px-6 pb-24 pt-[17vh] text-center sm:px-10 sm:pt-[18vh]">
-          <div className="max-w-5xl">
-            <p className="hero-kicker text-[11px] uppercase tracking-[0.46em] text-white/72 sm:text-xs">
-              Yuting Wu / Wide Field Archive
+        <div className="relative mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="hero-kicker text-[11px] uppercase tracking-[0.5em] text-white/58 sm:text-xs">
+              Yuting Wu / Welcome Archive
             </p>
-            <h1 className="hero-title mt-7 text-white">
+            <h1 className="hero-title mt-6 text-white">
               <span data-line className="hero-title-label">
-                Welcome
+                Welcome to my world
               </span>
               <span data-line className="hero-title-main">
-                to my <span className="hero-title-emphasis">world</span>
+                Wide, quiet,
+                <br />
+                idealistic
               </span>
             </h1>
-            <p className="hero-copy mx-auto mt-7 max-w-2xl text-sm leading-7 text-white/78 sm:text-lg sm:leading-8">
-              A wide-field homepage for the parts of life I want to hold in one
-              frame: work, weather, music, memory, and the ordinary scenes that
-              keep turning cinematic.
+            <p className="hero-copy mx-auto mt-6 max-w-2xl text-sm leading-7 text-white/72 sm:text-lg sm:leading-8">
+              A life shaped by open land, evening light, and the calm
+              predictability of rules I choose to keep.
             </p>
-            <a
-              href="#reel"
-              className="hero-copy mt-10 inline-flex items-center gap-3 rounded-full border border-white/18 bg-white/8 px-5 py-3 text-[11px] uppercase tracking-[0.34em] text-white backdrop-blur-md transition hover:bg-white/14"
-            >
-              Scroll into the reel
-              <span aria-hidden className="text-base leading-none">
-                ↓
-              </span>
-            </a>
+          </div>
+
+          <div className="hero-frame hero-dock mt-10 sm:mt-12">
+            <div className="hero-frame-shell">
+              <div className="hero-frame-image aspect-video">
+                {/* Static export on GitHub Pages needs a literal base-path-aware image URL. */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={withBasePath("/welcome-world-field.png")}
+                  alt="Wide Grand Teton field and mountain background"
+                  className="absolute inset-0 h-full w-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,9,12,0.18)_0%,rgba(7,9,12,0.02)_28%,rgba(7,9,12,0.14)_55%,rgba(7,9,12,0.68)_100%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_24%,rgba(255,255,255,0.16),transparent_34%)]" />
+                <div className="absolute inset-x-[8%] top-[10%] max-w-2xl">
+                  <p className="text-[11px] uppercase tracking-[0.42em] text-white/56">
+                    grass / tree / horizon / house rules
+                  </p>
+                  <p className="mt-4 max-w-xl [font-family:var(--font-display)] text-2xl leading-tight text-white sm:text-3xl lg:text-[2.7rem]">
+                    I want my world to feel expansive,
+                    <br />
+                    but never chaotic.
+                  </p>
+                </div>
+                <div className="absolute bottom-[9%] left-[8%] right-[8%] flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+                  <p className="max-w-lg text-sm leading-7 text-white/68 sm:text-base">
+                    The image is the invitation: open field, distance, air, and
+                    the feeling that there is still room to live carefully.
+                  </p>
+                  <a
+                    href="#reel"
+                    className="inline-flex items-center gap-3 self-start rounded-full border border-white/16 bg-black/24 px-5 py-3 text-[11px] uppercase tracking-[0.34em] text-white backdrop-blur-md transition hover:bg-white/12"
+                  >
+                    Enter the field
+                    <span aria-hidden className="text-base leading-none">
+                      ↓
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="hero-copy mx-auto mt-10 max-w-3xl text-center text-sm leading-7 text-white/60 sm:text-base sm:leading-8">
+            <p>
+              This homepage is less a portfolio cover and more a map of the
+              world I am building: one part grass and sunset, one part order
+              and repeatable rhythm.
+            </p>
           </div>
         </div>
       </section>
 
-      <div className="relative z-10 -mt-20 bg-[linear-gradient(180deg,rgba(5,6,8,0)_0%,rgba(5,6,8,0.9)_18%,rgba(5,6,8,1)_100%)] pb-24">
-        <section id="reel" className="hero-dock mx-auto max-w-7xl px-4 pt-4 sm:px-6">
-          <div className="rounded-[2rem] border border-white/10 bg-black/22 p-4 shadow-[0_36px_120px_rgba(0,0,0,0.32)] backdrop-blur-2xl sm:p-5">
+      <div className="relative bg-[linear-gradient(180deg,rgba(118,118,118,0.16)_0%,rgba(53,55,58,0.4)_18%,rgba(13,16,20,0.96)_48%,#090b0f_100%)] pb-24 pt-2">
+        <section id="reel" className="hero-dock mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.035] p-4 shadow-[0_32px_120px_rgba(0,0,0,0.24)] backdrop-blur-2xl sm:p-5">
             <div className="mb-4 flex flex-col gap-3 px-2 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="text-xs uppercase tracking-[0.38em] text-white/42">
-                  Life Reel
+                <p className="text-xs uppercase tracking-[0.38em] text-white/40">
+                  Story Reel
                 </p>
-                <p className="mt-2 max-w-2xl text-sm leading-7 text-white/64">
-                  Click into the different parts of my world. The reel keeps
-                  moving, but each frame opens a quieter section below.
+                <p className="mt-2 max-w-2xl text-sm leading-7 text-white/62">
+                  These are not just categories. They are the recurring pieces
+                  of the same world: order, field, sound, routine, and path.
                 </p>
               </div>
-              <p className="text-[11px] uppercase tracking-[0.32em] text-white/36">
+              <p className="text-[11px] uppercase tracking-[0.32em] text-white/34">
                 Hover to pause
               </p>
             </div>
@@ -248,16 +284,17 @@ export default function Home() {
 
         <section className="mx-auto mt-16 max-w-7xl px-6 sm:px-10">
           <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.38em] text-white/42">
-              Different Aspects
+            <p className="text-xs uppercase tracking-[0.38em] text-white/40">
+              World Logic
             </p>
-            <h2 className="mt-4 [font-family:var(--font-display)] text-3xl tracking-tight text-white sm:text-4xl lg:text-[3.3rem]">
-              The homepage can stay cinematic and still open into real life.
+            <h2 className="mt-4 [font-family:var(--font-display)] text-3xl tracking-tight text-white sm:text-4xl lg:text-[3.2rem]">
+              The point is not only to feel something. It is to understand how
+              I live inside it.
             </h2>
-            <p className="mt-5 text-base leading-8 text-white/68">
-              Instead of one formal landing page, this section works more like a
-              field guide - a way to move between the more public, more personal,
-              and more atmospheric pieces of who I am.
+            <p className="mt-5 text-base leading-8 text-white/66">
+              I want the mood to be spacious and idealistic, but the structure
+              to feel measured. The world is wide; the life inside it is chosen
+              carefully.
             </p>
           </div>
 
@@ -323,17 +360,6 @@ export default function Home() {
                 </div>
               </article>
             ))}
-          </div>
-        </section>
-
-        <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6">
-          <div className="rounded-[2rem] border border-white/10 bg-black/18 p-4 backdrop-blur-2xl sm:p-5">
-            <div className="mb-4 px-2">
-              <p className="text-xs uppercase tracking-[0.38em] text-white/42">
-                Rolling Captions
-              </p>
-            </div>
-            <FilmStrip items={reelCards} reverse />
           </div>
         </section>
       </div>
