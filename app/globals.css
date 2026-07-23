@@ -24,6 +24,10 @@
   --color-m-blue: var(--m-blue);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--site-bg);
   color: var(--site-fg);
@@ -95,6 +99,101 @@ button {
   animation-delay: 0.65s;
 }
 
+.film-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.film-track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  animation: film-scroll 34s linear infinite;
+  padding: 0.35rem 0;
+}
+
+.film-track[data-reverse="true"] {
+  animation-direction: reverse;
+}
+
+.film-marquee:hover .film-track {
+  animation-play-state: paused;
+}
+
+.film-card {
+  position: relative;
+  display: block;
+  min-width: clamp(14rem, 24vw, 19rem);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 1.5rem;
+  padding: 1.85rem 1.2rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03)),
+    rgba(5, 7, 10, 0.62);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(16px);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.film-card::before,
+.film-card::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  height: 9px;
+  background:
+    radial-gradient(
+        circle closest-side,
+        rgba(6, 8, 12, 0.88) 68%,
+        transparent 72%
+      )
+      repeat-x center / 20px 9px;
+  opacity: 0.96;
+}
+
+.film-card::before {
+  top: 0.6rem;
+}
+
+.film-card::after {
+  bottom: 0.6rem;
+}
+
+.film-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.3);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05)),
+    rgba(5, 7, 10, 0.72);
+}
+
+@keyframes film-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-title [data-line],
   .hero-copy,
@@ -104,5 +203,9 @@ button {
     opacity: 1;
     filter: none;
     transform: none;
+  }
+
+  .film-track {
+    animation: none;
   }
 }
