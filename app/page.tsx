@@ -188,19 +188,23 @@ export default function Home() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,6,8,0.22)_0%,rgba(4,6,8,0.08)_30%,rgba(4,6,8,0.12)_55%,rgba(4,6,8,0.7)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,6,8,0.38)_0%,rgba(4,6,8,0.2)_26%,rgba(4,6,8,0.12)_52%,rgba(4,6,8,0.7)_100%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_38%,rgba(255,255,255,0.15),transparent_34%)]" />
 
-        <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-6 pb-24 pt-28 text-center sm:px-10 sm:pt-32">
+        <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-start px-6 pb-24 pt-[17vh] text-center sm:px-10 sm:pt-[18vh]">
           <div className="max-w-5xl">
             <p className="hero-kicker text-[11px] uppercase tracking-[0.46em] text-white/72 sm:text-xs">
               Yuting Wu / Wide Field Archive
             </p>
-            <h1 className="hero-title mt-7 [font-family:var(--font-display)] text-5xl leading-[0.92] tracking-[-0.045em] text-white sm:text-7xl lg:text-[7.2rem]">
-              <span data-line>Welcome</span>
-              <span data-line>to my world</span>
+            <h1 className="hero-title mt-7 text-white">
+              <span data-line className="hero-title-label">
+                Welcome
+              </span>
+              <span data-line className="hero-title-main">
+                to my <span className="hero-title-emphasis">world</span>
+              </span>
             </h1>
-            <p className="hero-copy mx-auto mt-7 max-w-2xl text-sm leading-7 text-white/80 sm:text-lg sm:leading-8">
+            <p className="hero-copy mx-auto mt-7 max-w-2xl text-sm leading-7 text-white/78 sm:text-lg sm:leading-8">
               A wide-field homepage for the parts of life I want to hold in one
               frame: work, weather, music, memory, and the ordinary scenes that
               keep turning cinematic.
