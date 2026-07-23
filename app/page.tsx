@@ -174,15 +174,19 @@ const lifePanels: AspectPanel[] = [
 
 export default function Home() {
   return (
-    <div className="bg-[linear-gradient(180deg,#07090c_0%,#0d1014_18%,#2a2d31_54%,#0a0d11_100%)] text-white">
-      <section className="relative overflow-hidden px-5 pb-16 pt-24 sm:px-8 sm:pt-28 lg:px-10">
+    <div className="bg-[linear-gradient(180deg,#111317_0%,#73757a_12%,#1b1e23_28%,#090b0f_100%)] text-white">
+      <section className="relative overflow-hidden px-5 pb-16 pt-18 sm:px-8 sm:pt-22 lg:px-10">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-0 h-[38rem] bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_52%)]"
+          className="pointer-events-none absolute inset-x-0 top-0 h-48 bg-[linear-gradient(180deg,rgba(154,156,162,0.58)_0%,rgba(154,156,162,0.2)_38%,rgba(154,156,162,0)_100%)]"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-[20rem] h-56 bg-[linear-gradient(180deg,rgba(164,164,164,0.08),rgba(164,164,164,0))]"
+          className="pointer-events-none absolute inset-x-0 top-28 h-[32rem] bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.12),transparent_56%)]"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-[linear-gradient(180deg,rgba(118,121,126,0)_0%,rgba(118,121,126,0.2)_45%,rgba(118,121,126,0.5)_100%)]"
         />
 
         <div className="relative mx-auto max-w-7xl">
@@ -190,24 +194,10 @@ export default function Home() {
             <p className="hero-kicker text-[11px] uppercase tracking-[0.5em] text-white/58 sm:text-xs">
               Yuting Wu / Welcome Archive
             </p>
-            <h1 className="hero-title mt-6 text-white">
-              <span data-line className="hero-title-label">
-                Welcome to my world
-              </span>
-              <span data-line className="hero-title-main">
-                Wide, quiet,
-                <br />
-                idealistic
-              </span>
-            </h1>
-            <p className="hero-copy mx-auto mt-6 max-w-2xl text-sm leading-7 text-white/72 sm:text-lg sm:leading-8">
-              A life shaped by open land, evening light, and the calm
-              predictability of rules I choose to keep.
-            </p>
           </div>
 
-          <div className="hero-frame hero-dock mt-10 sm:mt-12">
-            <div className="hero-frame-shell">
+          <div className="hero-frame hero-dock mt-8 sm:mt-10">
+            <div className="hero-frame-shell hero-frame-shell--cinema">
               <div className="hero-frame-image aspect-video">
                 {/* Static export on GitHub Pages needs a literal base-path-aware image URL. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -216,48 +206,37 @@ export default function Home() {
                   alt="Wide Grand Teton field and mountain background"
                   className="absolute inset-0 h-full w-full object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,9,12,0.18)_0%,rgba(7,9,12,0.02)_28%,rgba(7,9,12,0.14)_55%,rgba(7,9,12,0.68)_100%)]" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_24%,rgba(255,255,255,0.16),transparent_34%)]" />
-                <div className="absolute inset-x-[8%] top-[10%] max-w-2xl">
-                  <p className="text-[11px] uppercase tracking-[0.42em] text-white/56">
-                    grass / tree / horizon / house rules
-                  </p>
-                  <p className="mt-4 max-w-xl [font-family:var(--font-display)] text-2xl leading-tight text-white sm:text-3xl lg:text-[2.7rem]">
-                    I want my world to feel expansive,
-                    <br />
-                    but never chaotic.
-                  </p>
-                </div>
-                <div className="absolute bottom-[9%] left-[8%] right-[8%] flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
-                  <p className="max-w-lg text-sm leading-7 text-white/68 sm:text-base">
-                    The image is the invitation: open field, distance, air, and
-                    the feeling that there is still room to live carefully.
-                  </p>
-                  <a
-                    href="#reel"
-                    className="inline-flex items-center gap-3 self-start rounded-full border border-white/16 bg-black/24 px-5 py-3 text-[11px] uppercase tracking-[0.34em] text-white backdrop-blur-md transition hover:bg-white/12"
-                  >
-                    Enter the field
-                    <span aria-hidden className="text-base leading-none">
-                      ↓
-                    </span>
-                  </a>
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(112,114,120,0.36)_0%,rgba(7,9,12,0.08)_18%,rgba(7,9,12,0.1)_58%,rgba(104,106,112,0.36)_100%)]" />
+                <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,9,12,0.16)_0%,rgba(7,9,12,0.03)_14%,rgba(7,9,12,0.03)_86%,rgba(7,9,12,0.16)_100%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(255,255,255,0.14),transparent_34%)]" />
+                <div className="absolute inset-x-[8%] top-[11%] flex justify-center text-center">
+                  <div className="max-w-3xl">
+                    <h1 className="hero-title text-white">
+                      <span data-line className="hero-title-label">
+                        Welcome to my world
+                      </span>
+                      <span data-line className="hero-title-main">
+                        Wide, quiet,
+                        <br />
+                        idealistic
+                      </span>
+                    </h1>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="hero-copy mx-auto mt-10 max-w-3xl text-center text-sm leading-7 text-white/60 sm:text-base sm:leading-8">
+          <div className="hero-copy mx-auto mt-8 max-w-2xl text-center text-sm leading-7 text-white/58 sm:text-base sm:leading-8">
             <p>
-              This homepage is less a portfolio cover and more a map of the
-              world I am building: one part grass and sunset, one part order
-              and repeatable rhythm.
+              A quieter opening, framed more like a film still: grass,
+              distance, evening light, and a life held together by calm rules.
             </p>
           </div>
         </div>
       </section>
 
-      <div className="relative bg-[linear-gradient(180deg,rgba(118,118,118,0.16)_0%,rgba(53,55,58,0.4)_18%,rgba(13,16,20,0.96)_48%,#090b0f_100%)] pb-24 pt-2">
+      <div className="relative bg-[linear-gradient(180deg,rgba(128,130,136,0.46)_0%,rgba(61,64,68,0.55)_12%,rgba(18,21,26,0.95)_38%,#090b0f_100%)] pb-24 pt-4">
         <section id="reel" className="hero-dock mx-auto max-w-7xl px-4 sm:px-6">
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.035] p-4 shadow-[0_32px_120px_rgba(0,0,0,0.24)] backdrop-blur-2xl sm:p-5">
             <div className="mb-4 flex flex-col gap-3 px-2 sm:flex-row sm:items-end sm:justify-between">

@@ -143,6 +143,16 @@ button {
   backdrop-filter: blur(18px);
 }
 
+.hero-frame-shell--cinema {
+  border-radius: 1.35rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)),
+    rgba(12, 14, 18, 0.72);
+  box-shadow:
+    0 30px 120px rgba(0, 0, 0, 0.34),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
 .hero-frame-shell::before {
   content: "";
   position: absolute;
@@ -157,6 +167,10 @@ button {
   position: relative;
   overflow: hidden;
   border-radius: 2rem;
+}
+
+.hero-frame-shell--cinema .hero-frame-image {
+  border-radius: 1.35rem;
 }
 
 .film-marquee {
