@@ -174,69 +174,77 @@ const lifePanels: AspectPanel[] = [
 
 export default function Home() {
   return (
-    <div className="bg-[linear-gradient(180deg,#111317_0%,#73757a_12%,#1b1e23_28%,#090b0f_100%)] text-white">
-      <section className="relative overflow-hidden px-5 pb-16 pt-18 sm:px-8 sm:pt-22 lg:px-10">
+    <div className="bg-[linear-gradient(180deg,#0f1216_0%,#0d1014_100%)] text-white">
+      <section className="relative min-h-screen overflow-hidden">
+        {/* Static export on GitHub Pages needs a literal base-path-aware image URL. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={withBasePath("/welcome-world-field.png")}
+          alt="Wide Grand Teton field and mountain background"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(162,166,173,0.24)_0%,rgba(9,11,14,0.16)_20%,rgba(7,9,12,0.28)_62%,rgba(8,10,14,0.78)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,11,14,0.32)_0%,rgba(9,11,14,0.14)_18%,rgba(9,11,14,0.08)_46%,rgba(9,11,14,0.14)_78%,rgba(9,11,14,0.32)_100%)]" />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-0 h-48 bg-[linear-gradient(180deg,rgba(154,156,162,0.58)_0%,rgba(154,156,162,0.2)_38%,rgba(154,156,162,0)_100%)]"
+          className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[linear-gradient(180deg,rgba(181,184,190,0.28)_0%,rgba(181,184,190,0)_100%)]"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-28 h-[32rem] bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.12),transparent_56%)]"
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-[linear-gradient(180deg,rgba(118,121,126,0)_0%,rgba(118,121,126,0.2)_45%,rgba(118,121,126,0.5)_100%)]"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-72 bg-[linear-gradient(180deg,rgba(124,128,134,0)_0%,rgba(82,85,90,0.34)_46%,rgba(9,11,15,0.96)_100%)]"
         />
 
-        <div className="relative mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="hero-kicker text-[11px] uppercase tracking-[0.5em] text-white/58 sm:text-xs">
-              Yuting Wu / Welcome Archive
+        <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-6 pb-10 pt-28 sm:px-10 sm:pt-32">
+          <div className="hero-dock max-w-4xl">
+            <p className="hero-kicker text-[11px] uppercase tracking-[0.48em] text-white/58 sm:text-xs">
+              Growth product &amp; analytics operator
             </p>
-          </div>
-
-          <div className="hero-frame hero-dock mt-8 sm:mt-10">
-            <div className="hero-frame-shell hero-frame-shell--cinema">
-              <div className="hero-frame-image aspect-video">
-                {/* Static export on GitHub Pages needs a literal base-path-aware image URL. */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={withBasePath("/welcome-world-field.png")}
-                  alt="Wide Grand Teton field and mountain background"
-                  className="absolute inset-0 h-full w-full object-cover object-center"
-                />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(112,114,120,0.36)_0%,rgba(7,9,12,0.08)_18%,rgba(7,9,12,0.1)_58%,rgba(104,106,112,0.36)_100%)]" />
-                <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,9,12,0.16)_0%,rgba(7,9,12,0.03)_14%,rgba(7,9,12,0.03)_86%,rgba(7,9,12,0.16)_100%)]" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,rgba(255,255,255,0.14),transparent_34%)]" />
-                <div className="absolute inset-x-[8%] top-[11%] flex justify-center text-center">
-                  <div className="max-w-3xl">
-                    <h1 className="hero-title text-white">
-                      <span data-line className="hero-title-label">
-                        Welcome to my world
-                      </span>
-                      <span data-line className="hero-title-main">
-                        Wide, quiet,
-                        <br />
-                        idealistic
-                      </span>
-                    </h1>
-                  </div>
-                </div>
-              </div>
+            <h1 className="hero-title mt-7 text-white">
+              <span data-line className="hero-title-main max-w-4xl">
+                Welcome
+                <br />
+                to my world
+              </span>
+            </h1>
+            <p className="hero-copy mt-7 max-w-3xl text-base leading-8 text-white/74 sm:text-[1.15rem]">
+              A cinematic front door for the stories, systems, and calm rules
+              that shape how I live and work.
+            </p>
+            <div className="hero-copy mt-9">
+              <a
+                href="#reel"
+                className="inline-flex items-center rounded-full border border-white/18 bg-white/6 px-7 py-3 text-[11px] uppercase tracking-[0.34em] text-white/88 backdrop-blur-sm transition hover:bg-white/10"
+              >
+                Explore the world
+              </a>
             </div>
           </div>
 
-          <div className="hero-copy mx-auto mt-8 max-w-2xl text-center text-sm leading-7 text-white/58 sm:text-base sm:leading-8">
-            <p>
-              A quieter opening, framed more like a film still: grass,
-              distance, evening light, and a life held together by calm rules.
-            </p>
+          <div className="mt-auto flex flex-col gap-8 pt-12 lg:flex-row lg:items-end lg:justify-between">
+            <div className="hero-copy max-w-md text-sm leading-7 text-white/52">
+              Designed around your Grand Teton wallpaper: wide air, small
+              figure, and a quieter entrance before the deeper archive.
+            </div>
+
+            <div className="hero-dock flex items-center gap-3 self-start lg:self-auto">
+              <IconLink href="/about/" label="About">
+                <CirclePersonIcon />
+              </IconLink>
+              <IconLink href="/case-studies/" label="Work">
+                <BriefcaseIcon />
+              </IconLink>
+              <IconLink href="/resume/" label="Resume">
+                <DocumentIcon />
+              </IconLink>
+              <IconLink href="mailto:t112255zl@gmail.com" label="Mail">
+                <MailIcon />
+              </IconLink>
+            </div>
           </div>
         </div>
       </section>
 
-      <div className="relative bg-[linear-gradient(180deg,rgba(128,130,136,0.46)_0%,rgba(61,64,68,0.55)_12%,rgba(18,21,26,0.95)_38%,#090b0f_100%)] pb-24 pt-4">
+      <div className="relative bg-[linear-gradient(180deg,rgba(128,130,136,0.34)_0%,rgba(60,63,68,0.38)_10%,rgba(17,20,25,0.94)_30%,#090b0f_100%)] pb-24 pt-10">
         <section id="reel" className="hero-dock mx-auto max-w-7xl px-4 sm:px-6">
           <div className="rounded-[2rem] border border-white/10 bg-white/[0.035] p-4 shadow-[0_32px_120px_rgba(0,0,0,0.24)] backdrop-blur-2xl sm:p-5">
             <div className="mb-4 flex flex-col gap-3 px-2 sm:flex-row sm:items-end sm:justify-between">
@@ -380,5 +388,71 @@ function FilmStrip({
         ))}
       </div>
     </div>
+  );
+}
+
+function IconLink({
+  href,
+  label,
+  children,
+}: {
+  href: string;
+  label: string;
+  children: React.ReactNode;
+}) {
+  const className =
+    "inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/12 bg-black/18 text-white/78 backdrop-blur-md transition hover:border-white/22 hover:bg-white/8 hover:text-white";
+
+  if (href.startsWith("mailto:")) {
+    return (
+      <a href={href} aria-label={label} className={className}>
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={href} aria-label={label} className={className}>
+      {children}
+    </Link>
+  );
+}
+
+function CirclePersonIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden className="h-5 w-5 fill-none stroke-current">
+      <circle cx="12" cy="12" r="9" strokeWidth="1.4" />
+      <circle cx="12" cy="9" r="2.3" strokeWidth="1.4" />
+      <path d="M7.8 16.6c1-1.9 2.5-2.9 4.2-2.9s3.2 1 4.2 2.9" strokeWidth="1.4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function BriefcaseIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden className="h-5 w-5 fill-none stroke-current">
+      <rect x="4.5" y="7.5" width="15" height="10.5" rx="2" strokeWidth="1.4" />
+      <path d="M9 7.5V6.4c0-.9.7-1.6 1.6-1.6h2.8c.9 0 1.6.7 1.6 1.6v1.1" strokeWidth="1.4" />
+      <path d="M4.5 12.2h15" strokeWidth="1.4" />
+    </svg>
+  );
+}
+
+function DocumentIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden className="h-5 w-5 fill-none stroke-current">
+      <path d="M8 4.8h6l3 3v11.4c0 1-.8 1.8-1.8 1.8H8c-1 0-1.8-.8-1.8-1.8V6.6C6.2 5.6 7 4.8 8 4.8Z" strokeWidth="1.4" />
+      <path d="M14 4.8v3.3h3" strokeWidth="1.4" />
+      <path d="M9.2 12h5.6M9.2 15.2h5.6" strokeWidth="1.4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function MailIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden className="h-5 w-5 fill-none stroke-current">
+      <rect x="4.5" y="6.5" width="15" height="11" rx="2" strokeWidth="1.4" />
+      <path d="m6.5 8.3 5.5 4.6 5.5-4.6" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
   );
 }

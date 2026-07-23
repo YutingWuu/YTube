@@ -10,10 +10,9 @@ const navLinks = [
 ];
 
 const homeNavLinks = [
-  { href: "#work", label: "Work" },
-  { href: "#field-notes", label: "Field" },
-  { href: "#soundtrack", label: "Sound" },
-  { href: "#timeline", label: "Timeline" },
+  { href: "/about/", label: "About" },
+  { href: "/case-studies/", label: "Work" },
+  { href: "/resume/", label: "Resume" },
 ];
 
 export default function SiteShell({
@@ -41,13 +40,13 @@ export default function SiteShell({
             </Link>
             <div className="pointer-events-auto flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] text-white/70 sm:gap-8">
               {homeNavLinks.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   className="transition hover:text-white"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </nav>
