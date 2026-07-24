@@ -27,69 +27,30 @@ type AspectPanel = {
   secondaryLink?: AspectLink;
 };
 
-const reelCards: ReelCard[] = [
+const dayFrames: ReelCard[] = [
   {
     frame: "01",
-    title: "Order",
-    subtitle: "the systems and rituals that make life feel steady",
-    href: "#work",
+    title: "Morning ritual",
+    subtitle: "the small repetitions that make a day feel known",
+    href: "#everyday",
   },
   {
     frame: "02",
-    title: "Field",
-    subtitle: "open grass, distance, and the calm of wide air",
-    href: "#field-notes",
+    title: "Work in progress",
+    subtitle: "turning complicated things into calm, useful systems",
+    href: "/case-studies/",
   },
   {
     frame: "03",
-    title: "Sound",
-    subtitle: "the songs and scenes that keep the world moving",
-    href: "#soundtrack",
-  },
-  {
-    frame: "04",
-    title: "Routine",
-    subtitle: "the private patterns that make life predictable",
-    href: "#everyday",
-  },
-  {
-    frame: "05",
-    title: "Path",
-    subtitle: "the timeline under everything else",
-    href: "#timeline",
-  },
-];
-
-const moodCards: ReelCard[] = [
-  {
-    frame: "A",
-    title: "wide light",
-    subtitle: "a world that feels larger than the day itself",
+    title: "Wide field",
+    subtitle: "distance, grass, and enough room to hear yourself think",
     href: "#field-notes",
   },
   {
-    frame: "B",
-    title: "house rules",
-    subtitle: "stability, rhythm, and self-made order",
+    frame: "04",
+    title: "Evening return",
+    subtitle: "music, familiar routes, and the quiet end of a day",
     href: "#everyday",
-  },
-  {
-    frame: "C",
-    title: "ideal weather",
-    subtitle: "quiet optimism and a horizon to move toward",
-    href: "#soundtrack",
-  },
-  {
-    frame: "D",
-    title: "work map",
-    subtitle: "where structure turns into real systems",
-    href: "#work",
-  },
-  {
-    frame: "E",
-    title: "long future",
-    subtitle: "the chapters that keep opening outward",
-    href: "#timeline",
   },
 ];
 
@@ -174,7 +135,7 @@ const lifePanels: AspectPanel[] = [
 
 export default function Home() {
   return (
-    <div className="bg-[linear-gradient(180deg,#0f1216_0%,#0d1014_100%)] text-white">
+    <div className="bg-[#17191b] text-white">
       <section className="relative min-h-screen overflow-hidden">
         {/* Static export on GitHub Pages needs a literal base-path-aware image URL. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -183,50 +144,35 @@ export default function Home() {
           alt="Wide Grand Teton field and mountain background"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(162,166,173,0.24)_0%,rgba(9,11,14,0.16)_20%,rgba(7,9,12,0.28)_62%,rgba(8,10,14,0.78)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(9,11,14,0.32)_0%,rgba(9,11,14,0.14)_18%,rgba(9,11,14,0.08)_46%,rgba(9,11,14,0.14)_78%,rgba(9,11,14,0.32)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(163,166,169,0.14)_0%,rgba(9,11,13,0.08)_32%,rgba(7,9,11,0.2)_68%,rgba(38,40,42,0.84)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,9,11,0.24)_0%,rgba(7,9,11,0.08)_31%,rgba(7,9,11,0.04)_65%,rgba(7,9,11,0.18)_100%)]" />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[linear-gradient(180deg,rgba(181,184,190,0.28)_0%,rgba(181,184,190,0)_100%)]"
+          className="film-grain pointer-events-none absolute inset-0 opacity-30"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-72 bg-[linear-gradient(180deg,rgba(124,128,134,0)_0%,rgba(82,85,90,0.34)_46%,rgba(9,11,15,0.96)_100%)]"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-80 bg-[linear-gradient(180deg,rgba(133,135,137,0)_0%,rgba(101,103,105,0.4)_48%,#4b4d4e_100%)]"
         />
 
         <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-6 pb-10 pt-28 sm:px-10 sm:pt-32">
-          <div className="hero-dock max-w-4xl">
-            <p className="hero-kicker text-[11px] uppercase tracking-[0.48em] text-white/58 sm:text-xs">
-              Growth product &amp; analytics operator
-            </p>
-            <h1 className="hero-title mt-7 text-white">
+          <div className="hero-dock max-w-4xl pt-[7vh] sm:pt-[9vh]">
+            <h1 className="hero-title text-white">
               <span data-line className="hero-title-main max-w-4xl">
                 Welcome
                 <br />
                 to my world
               </span>
             </h1>
-            <p className="hero-copy mt-7 max-w-3xl text-base leading-8 text-white/74 sm:text-[1.15rem]">
-              A cinematic front door for the stories, systems, and calm rules
-              that shape how I live and work.
+            <p className="hero-copy mt-8 max-w-sm text-[0.9rem] leading-7 text-white/72 sm:text-base">
+              There is room for the unknown,
+              <br />
+              and a rhythm I return to.
             </p>
-            <div className="hero-copy mt-9">
-              <a
-                href="#reel"
-                className="inline-flex items-center rounded-full border border-white/18 bg-white/6 px-7 py-3 text-[11px] uppercase tracking-[0.34em] text-white/88 backdrop-blur-sm transition hover:bg-white/10"
-              >
-                Explore the world
-              </a>
-            </div>
           </div>
 
-          <div className="mt-auto flex flex-col gap-8 pt-12 lg:flex-row lg:items-end lg:justify-between">
-            <div className="hero-copy max-w-md text-sm leading-7 text-white/52">
-              Designed around your Grand Teton wallpaper: wide air, small
-              figure, and a quieter entrance before the deeper archive.
-            </div>
-
-            <div className="hero-dock flex items-center gap-3 self-start lg:self-auto">
+          <div className="mt-auto flex justify-end pt-12">
+            <div className="hero-dock flex items-center gap-2.5">
               <IconLink href="/about/" label="About">
                 <CirclePersonIcon />
               </IconLink>
@@ -244,44 +190,37 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="relative bg-[linear-gradient(180deg,rgba(128,130,136,0.34)_0%,rgba(60,63,68,0.38)_10%,rgba(17,20,25,0.94)_30%,#090b0f_100%)] pb-24 pt-10">
-        <section id="reel" className="hero-dock mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="rounded-[2rem] border border-white/10 bg-white/[0.035] p-4 shadow-[0_32px_120px_rgba(0,0,0,0.24)] backdrop-blur-2xl sm:p-5">
-            <div className="mb-4 flex flex-col gap-3 px-2 sm:flex-row sm:items-end sm:justify-between">
+      <div className="relative bg-[linear-gradient(180deg,#4b4d4e_0%,#858786_14%,#b0b1ae_31%,#9e9f9d_50%,#6c6e6e_78%,#303335_100%)] pb-24 pt-14 sm:pt-20">
+        <section id="reel" className="hero-dock">
+          <div className="mx-auto max-w-7xl px-6 sm:px-10">
+            <div className="flex items-end justify-between gap-6">
               <div>
-                <p className="text-xs uppercase tracking-[0.38em] text-white/40">
-                  Story Reel
+                <p className="text-[10px] uppercase tracking-[0.42em] text-white/50">
+                  A day in four frames
                 </p>
-                <p className="mt-2 max-w-2xl text-sm leading-7 text-white/62">
-                  These are not just categories. They are the recurring pieces
-                  of the same world: order, field, sound, routine, and path.
+                <p className="mt-3 max-w-sm text-sm leading-6 text-white/72">
+                  The same world, returned to in different light.
                 </p>
               </div>
-              <p className="text-[11px] uppercase tracking-[0.32em] text-white/34">
-                Hover to pause
+              <p className="hidden text-[10px] uppercase tracking-[0.32em] text-white/44 sm:block">
+                Pause to look closer
               </p>
             </div>
-
-            <FilmStrip items={reelCards} />
-            <div className="mt-4">
-              <FilmStrip items={moodCards} reverse />
-            </div>
           </div>
+          <FilmStrip items={dayFrames} />
         </section>
 
-        <section className="mx-auto mt-16 max-w-7xl px-6 sm:px-10">
-          <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.38em] text-white/40">
-              World Logic
+        <section className="mx-auto mt-24 max-w-7xl px-6 sm:mt-32 sm:px-10">
+          <div className="max-w-2xl">
+            <p className="text-[10px] uppercase tracking-[0.42em] text-white/48">
+              What holds it together
             </p>
-            <h2 className="mt-4 [font-family:var(--font-display)] text-3xl tracking-tight text-white sm:text-4xl lg:text-[3.2rem]">
-              The point is not only to feel something. It is to understand how
-              I live inside it.
+            <h2 className="mt-5 [font-family:var(--font-display)] text-3xl leading-[0.98] tracking-tight text-white sm:text-4xl lg:text-[3.2rem]">
+              A wide world, kept in rhythm.
             </h2>
-            <p className="mt-5 text-base leading-8 text-white/66">
-              I want the mood to be spacious and idealistic, but the structure
-              to feel measured. The world is wide; the life inside it is chosen
-              carefully.
+            <p className="mt-5 text-base leading-8 text-white/72">
+              The landscape is expansive, but the life inside it is chosen with
+              care. These are the few things I return to.
             </p>
           </div>
 
@@ -290,11 +229,11 @@ export default function Home() {
               <article
                 key={panel.id}
                 id={panel.id}
-                className={`${panel.className} scroll-mt-28 relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 shadow-[0_24px_90px_rgba(0,0,0,0.2)] backdrop-blur-xl sm:p-7`}
+                className={`${panel.className} scroll-mt-28 relative overflow-hidden border-t border-white/18 px-0 py-7 sm:py-9`}
               >
                 <div
                   aria-hidden
-                  className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${panel.glowClassName} opacity-80`}
+                  className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.06),transparent_42%)] opacity-60"
                 />
                 <div className="relative">
                   <div className="flex items-center justify-between gap-4">
@@ -354,26 +293,20 @@ export default function Home() {
   );
 }
 
-function FilmStrip({
-  items,
-  reverse = false,
-}: {
-  items: ReelCard[];
-  reverse?: boolean;
-}) {
+function FilmStrip({ items }: { items: ReelCard[] }) {
   const loopedItems = [...items, ...items];
 
   return (
-    <div className="film-marquee">
-      <div className="film-track" data-reverse={reverse}>
+    <div className="film-marquee mt-8 sm:mt-10">
+      <div className="film-track">
         {loopedItems.map((item, index) => (
-          <a key={`${item.frame}-${index}`} href={item.href} className="film-card">
+          <Link key={`${item.frame}-${index}`} href={item.href} className="film-card">
             <div className="relative z-10 flex items-center justify-between gap-4">
               <span className="text-[11px] uppercase tracking-[0.32em] text-white/42">
                 {item.frame}
               </span>
-              <span className="text-[11px] uppercase tracking-[0.32em] text-white/30">
-                frame
+              <span className="text-[10px] uppercase tracking-[0.3em] text-white/34">
+                day / {item.frame}
               </span>
             </div>
             <div className="relative z-10 mt-7">
@@ -384,7 +317,7 @@ function FilmStrip({
                 {item.subtitle}
               </p>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
