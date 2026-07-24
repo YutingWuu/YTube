@@ -1,173 +1,69 @@
 import Link from "next/link";
-import { positioning } from "@/lib/projects";
+import DayReel from "@/components/day-reel";
 import { withBasePath } from "@/lib/site";
 
-type ReelCard = {
-  frame: string;
-  title: string;
-  subtitle: string;
-  href: string;
-};
-
-type AspectLink = {
-  href: string;
-  label: string;
-};
-
-type AspectPanel = {
-  id: string;
-  frame: string;
-  eyebrow: string;
-  title: string;
-  description: string;
-  chips: string[];
-  className: string;
-  glowClassName: string;
-  primaryLink?: AspectLink;
-  secondaryLink?: AspectLink;
-};
-
-const dayFrames: ReelCard[] = [
+const dayFrames = [
   {
-    frame: "01",
-    title: "Morning ritual",
-    subtitle: "the small repetitions that make a day feel known",
-    href: "#everyday",
+    time: "07:20",
+    place: "by the window",
+    note: "first light on the desk",
+    imageSrc: "/home-wallpaper-v3.png",
+    imagePosition: "center 60%",
+    href: "#inside",
   },
   {
-    frame: "02",
-    title: "Work in progress",
-    subtitle: "turning complicated things into calm, useful systems",
+    time: "10:40",
+    place: "the work table",
+    note: "one thing at a time",
+    imageSrc: "/welcome-world-field.png",
+    imagePosition: "center 64%",
     href: "/case-studies/",
   },
   {
-    frame: "03",
-    title: "Wide field",
-    subtitle: "distance, grass, and enough room to hear yourself think",
-    href: "#field-notes",
+    time: "18:16",
+    place: "past the window",
+    note: "the grass holds the last light",
+    imageSrc: "/welcome-world-field.png",
+    imagePosition: "center 48%",
+    href: "#outside",
   },
   {
-    frame: "04",
-    title: "Evening return",
-    subtitle: "music, familiar routes, and the quiet end of a day",
-    href: "#everyday",
-  },
-];
-
-const lifePanels: AspectPanel[] = [
-  {
-    id: "work",
-    frame: "01",
-    eyebrow: "Order",
-    title: "I like lives that feel wide, but never directionless.",
-    description:
-      `${positioning.statement} I care about systems, growth, and product work because they let me make something complex feel clear, calm, and usable.`,
-    chips: ["Case studies", "Growth systems", "Product thinking"],
-    className: "lg:col-span-7",
-    glowClassName:
-      "from-white/12 via-white/4 to-transparent lg:bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.16),_transparent_58%)]",
-    primaryLink: {
-      href: "/case-studies/",
-      label: "Open the work archive",
-    },
-    secondaryLink: {
-      href: "/resume/",
-      label: "See the timeline",
-    },
-  },
-  {
-    id: "field-notes",
-    frame: "02",
-    eyebrow: "Field",
-    title: "The world I want is grassy, open, wind-lit, and unhurried.",
-    description:
-      "Big sky, quiet tree lines, one distant house, evening light, and enough space to hear yourself think. The landscape is not only a mood; it is the emotional architecture underneath everything else.",
-    chips: ["Grassland", "Tree line", "Evening air"],
-    className: "lg:col-span-5",
-    glowClassName:
-      "from-slate-200/10 via-transparent to-transparent lg:bg-[radial-gradient(circle_at_top_right,_rgba(203,213,225,0.18),_transparent_56%)]",
-  },
-  {
-    id: "soundtrack",
-    frame: "03",
-    eyebrow: "Sound",
-    title: "Idealism needs atmosphere, not just plans.",
-    description:
-      "Music, night air, slow drives, and scenes that feel slightly cinematic keep the practical parts of life from becoming flat. This is where longing and momentum meet.",
-    chips: ["Concert nights", "Night drives", "Idealism"],
-    className: "lg:col-span-5",
-    glowClassName:
-      "from-zinc-200/8 via-transparent to-transparent lg:bg-[radial-gradient(circle_at_top_left,_rgba(228,228,231,0.14),_transparent_54%)]",
-  },
-  {
-    id: "everyday",
-    frame: "04",
-    eyebrow: "Routine",
-    title: "Predictability, to me, is not boring. It is a form of peace.",
-    description:
-      "I like repeated mornings, ordered rooms, familiar routes, and small rituals that make the future feel legible. The house in this world is quiet because its rhythms are already known.",
-    chips: ["Rules", "Rhythm", "Private order"],
-    className: "lg:col-span-7",
-    glowClassName:
-      "from-stone-200/8 via-transparent to-transparent lg:bg-[radial-gradient(circle_at_bottom_right,_rgba(231,229,228,0.14),_transparent_60%)]",
-  },
-  {
-    id: "timeline",
-    frame: "05",
-    eyebrow: "Path",
-    title: "Under the moodboard, there is still a very real life in motion.",
-    description:
-      "The formal pages still matter: where I have worked, what I have built, and the sequence of decisions that made this world possible in the first place.",
-    chips: ["Resume", "Background", "Next chapter"],
-    className: "lg:col-span-12",
-    glowClassName:
-      "from-white/10 via-transparent to-transparent lg:bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.12),_transparent_62%)]",
-    primaryLink: {
-      href: "/resume/",
-      label: "Open resume",
-    },
-    secondaryLink: {
-      href: "/about/",
-      label: "Open about",
-    },
+    time: "22:08",
+    place: "home again",
+    note: "putting the day back in its place",
+    imageSrc: "/home-wallpaper-v3.png",
+    imagePosition: "center 76%",
+    href: "#night",
   },
 ];
 
 export default function Home() {
   return (
-    <div className="bg-[#17191b] text-white">
-      <section className="relative min-h-screen overflow-hidden">
+    <div className="bg-[#b4b2aa] text-[#20231f]">
+      <section className="relative min-h-screen overflow-hidden bg-[#58615b] text-white">
         {/* Static export on GitHub Pages needs a literal base-path-aware image URL. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={withBasePath("/welcome-world-field.png")}
-          alt="Wide Grand Teton field and mountain background"
+          alt="A wide Grand Teton field beneath snow-capped mountains"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(163,166,169,0.14)_0%,rgba(9,11,13,0.08)_32%,rgba(7,9,11,0.2)_68%,rgba(38,40,42,0.84)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,9,11,0.24)_0%,rgba(7,9,11,0.08)_31%,rgba(7,9,11,0.04)_65%,rgba(7,9,11,0.18)_100%)]" />
-        <div
-          aria-hidden
-          className="film-grain pointer-events-none absolute inset-0 opacity-30"
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-80 bg-[linear-gradient(180deg,rgba(133,135,137,0)_0%,rgba(101,103,105,0.4)_48%,#4b4d4e_100%)]"
-        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,16,13,0.27)_0%,rgba(11,16,13,0.08)_42%,rgba(11,16,13,0.13)_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-56 bg-[linear-gradient(180deg,rgba(105,108,102,0)_0%,rgba(116,113,105,0.44)_68%,#b4b2aa_100%)]" />
 
-        <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-6 pb-10 pt-28 sm:px-10 sm:pt-32">
-          <div className="hero-dock max-w-4xl pt-[7vh] sm:pt-[9vh]">
+        <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-6 pb-9 pt-28 sm:px-10 sm:pt-32">
+          <div className="hero-dock max-w-3xl pt-[7vh] sm:pt-[9vh]">
             <h1 className="hero-title text-white">
-              <span data-line className="hero-title-main max-w-4xl">
+              <span data-line className="hero-title-main">
                 Welcome
                 <br />
                 to my world
               </span>
             </h1>
-            <p className="hero-copy mt-8 max-w-sm text-[0.9rem] leading-7 text-white/72 sm:text-base">
-              There is room for the unknown,
+            <p className="hero-copy mt-7 max-w-xs text-[0.9rem] leading-7 text-white/80 sm:text-base">
+              A quiet room inside.
               <br />
-              and a rhythm I return to.
+              Mountains waiting outside.
             </p>
           </div>
 
@@ -190,136 +86,86 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="relative bg-[linear-gradient(180deg,#4b4d4e_0%,#858786_14%,#b0b1ae_31%,#9e9f9d_50%,#6c6e6e_78%,#303335_100%)] pb-24 pt-14 sm:pt-20">
-        <section id="reel" className="hero-dock">
-          <div className="mx-auto max-w-7xl px-6 sm:px-10">
-            <div className="flex items-end justify-between gap-6">
-              <div>
-                <p className="text-[10px] uppercase tracking-[0.42em] text-white/50">
-                  A day in four frames
-                </p>
-                <p className="mt-3 max-w-sm text-sm leading-6 text-white/72">
-                  The same world, returned to in different light.
-                </p>
-              </div>
-              <p className="hidden text-[10px] uppercase tracking-[0.32em] text-white/44 sm:block">
-                Pause to look closer
+      <main className="bg-[linear-gradient(180deg,#b4b2aa_0%,#dedbd1_18%,#ece8dc_72%,#d3d0c6_100%)] pb-24 pt-14 sm:pt-20">
+        <section aria-labelledby="day-title">
+          <div className="mx-auto flex max-w-7xl items-end justify-between gap-6 px-6 sm:px-10">
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.28em] text-[#4b514a]">
+                Thursday, in four moments
               </p>
+              <h2
+                id="day-title"
+                className="mt-3 [font-family:var(--font-display)] text-3xl tracking-tight text-[#272b25] sm:text-4xl"
+              >
+                A day I know by heart.
+              </h2>
             </div>
+            <p className="hidden max-w-40 text-right text-xs leading-5 text-[#596057] sm:block">
+              Still images now. Motion will live here later.
+            </p>
           </div>
-          <FilmStrip items={dayFrames} />
+          <DayReel items={dayFrames} />
         </section>
 
         <section className="mx-auto mt-24 max-w-7xl px-6 sm:mt-32 sm:px-10">
-          <div className="max-w-2xl">
-            <p className="text-[10px] uppercase tracking-[0.42em] text-white/48">
-              What holds it together
-            </p>
-            <h2 className="mt-5 [font-family:var(--font-display)] text-3xl leading-[0.98] tracking-tight text-white sm:text-4xl lg:text-[3.2rem]">
-              A wide world, kept in rhythm.
-            </h2>
-            <p className="mt-5 text-base leading-8 text-white/72">
-              The landscape is expansive, but the life inside it is chosen with
-              care. These are the few things I return to.
-            </p>
-          </div>
-
-          <div className="mt-9 grid gap-6 lg:grid-cols-12">
-            {lifePanels.map((panel) => (
-              <article
-                key={panel.id}
-                id={panel.id}
-                className={`${panel.className} scroll-mt-28 relative overflow-hidden border-t border-white/18 px-0 py-7 sm:py-9`}
+          <div className="grid gap-14 lg:grid-cols-12 lg:gap-x-16">
+            <div id="inside" className="scroll-mt-24 lg:col-span-7">
+              <p className="text-[10px] uppercase tracking-[0.28em] text-[#596057]">
+                Inside
+              </p>
+              <h2 className="mt-4 max-w-xl [font-family:var(--font-display)] text-3xl leading-[1.02] tracking-tight text-[#272b25] sm:text-4xl">
+                The room is small enough for concentration.
+              </h2>
+              <p className="mt-5 max-w-xl text-base leading-8 text-[#4f554d]">
+                I like a clear desk, a readable plan, and work that can be
+                returned to without noise. The rules are not restrictive. They
+                leave more room for what matters.
+              </p>
+              <Link
+                href="/case-studies/"
+                className="mt-7 inline-flex border-b border-[#4d554d] pb-1 text-sm text-[#30362f] transition hover:border-transparent"
               >
-                <div
-                  aria-hidden
-                  className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.06),transparent_42%)] opacity-60"
-                />
-                <div className="relative">
-                  <div className="flex items-center justify-between gap-4">
-                    <p className="text-xs uppercase tracking-[0.34em] text-white/44">
-                      {panel.eyebrow}
-                    </p>
-                    <span className="text-[11px] uppercase tracking-[0.34em] text-white/34">
-                      {panel.frame}
-                    </span>
-                  </div>
+                Read the work
+              </Link>
+            </div>
 
-                  <h3 className="mt-5 max-w-3xl [font-family:var(--font-display)] text-2xl leading-tight tracking-tight text-white sm:text-[2rem]">
-                    {panel.title}
-                  </h3>
-                  <p className="mt-4 max-w-3xl text-sm leading-7 text-white/68 sm:text-base sm:leading-8">
-                    {panel.description}
+            <div id="outside" className="scroll-mt-24 lg:col-span-5">
+              <p className="text-[10px] uppercase tracking-[0.28em] text-[#596057]">
+                Outside
+              </p>
+              <h2 className="mt-4 [font-family:var(--font-display)] text-3xl leading-[1.02] tracking-tight text-[#272b25] sm:text-4xl">
+                The view keeps the plan from becoming too small.
+              </h2>
+              <p className="mt-5 text-base leading-8 text-[#4f554d]">
+                Grass, a single tree, a house at a distance, and a line of
+                mountains. The world stays wide even when the day is ordinary.
+              </p>
+            </div>
+
+            <div id="night" className="scroll-mt-24 border-t border-[#9c9b92] pt-8 lg:col-span-12">
+              <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.28em] text-[#596057]">
+                    At night
                   </p>
-
-                  <div className="mt-5 flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.26em] text-white/56">
-                    {panel.chips.map((chip) => (
-                      <span
-                        key={chip}
-                        className="rounded-full border border-white/14 px-3 py-1.5"
-                      >
-                        {chip}
-                      </span>
-                    ))}
-                  </div>
-
-                  {(panel.primaryLink || panel.secondaryLink) && (
-                    <div className="mt-7 flex flex-wrap gap-3">
-                      {panel.primaryLink && (
-                        <Link
-                          href={panel.primaryLink.href}
-                          className="inline-flex items-center gap-2 rounded-full border border-white/18 bg-white/9 px-4 py-2.5 text-[11px] uppercase tracking-[0.28em] text-white transition hover:bg-white/14"
-                        >
-                          {panel.primaryLink.label}
-                        </Link>
-                      )}
-                      {panel.secondaryLink && (
-                        <Link
-                          href={panel.secondaryLink.href}
-                          className="inline-flex items-center gap-2 rounded-full border border-white/12 px-4 py-2.5 text-[11px] uppercase tracking-[0.28em] text-white/76 transition hover:border-white/18 hover:text-white"
-                        >
-                          {panel.secondaryLink.label}
-                        </Link>
-                      )}
-                    </div>
-                  )}
+                  <p className="mt-3 max-w-xl [font-family:var(--font-display)] text-2xl leading-tight text-[#2f352e] sm:text-3xl">
+                    I put things back where they belong, so tomorrow has a
+                    place to begin.
+                  </p>
                 </div>
-              </article>
-            ))}
+                <div className="flex gap-5 text-sm text-[#4d554d]">
+                  <Link href="/about/" className="border-b border-[#777b72] pb-1 transition hover:border-transparent">
+                    About
+                  </Link>
+                  <Link href="/resume/" className="border-b border-[#777b72] pb-1 transition hover:border-transparent">
+                    Resume
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
-      </div>
-    </div>
-  );
-}
-
-function FilmStrip({ items }: { items: ReelCard[] }) {
-  const loopedItems = [...items, ...items];
-
-  return (
-    <div className="film-marquee mt-8 sm:mt-10">
-      <div className="film-track">
-        {loopedItems.map((item, index) => (
-          <Link key={`${item.frame}-${index}`} href={item.href} className="film-card">
-            <div className="relative z-10 flex items-center justify-between gap-4">
-              <span className="text-[11px] uppercase tracking-[0.32em] text-white/42">
-                {item.frame}
-              </span>
-              <span className="text-[10px] uppercase tracking-[0.3em] text-white/34">
-                day / {item.frame}
-              </span>
-            </div>
-            <div className="relative z-10 mt-7">
-              <p className="text-lg tracking-tight text-white sm:text-xl">
-                {item.title}
-              </p>
-              <p className="mt-2 text-sm leading-6 text-white/60">
-                {item.subtitle}
-              </p>
-            </div>
-          </Link>
-        ))}
-      </div>
+      </main>
     </div>
   );
 }
@@ -334,7 +180,7 @@ function IconLink({
   children: React.ReactNode;
 }) {
   const className =
-    "inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/12 bg-black/18 text-white/78 backdrop-blur-md transition hover:border-white/22 hover:bg-white/8 hover:text-white";
+    "inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/30 text-white/88 transition hover:border-white/80 hover:bg-white/10 hover:text-white";
 
   if (href.startsWith("mailto:")) {
     return (
@@ -353,7 +199,7 @@ function IconLink({
 
 function CirclePersonIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden className="h-5 w-5 fill-none stroke-current">
+    <svg viewBox="0 0 24 24" aria-hidden className="h-[18px] w-[18px] fill-none stroke-current">
       <circle cx="12" cy="12" r="9" strokeWidth="1.4" />
       <circle cx="12" cy="9" r="2.3" strokeWidth="1.4" />
       <path d="M7.8 16.6c1-1.9 2.5-2.9 4.2-2.9s3.2 1 4.2 2.9" strokeWidth="1.4" strokeLinecap="round" />
@@ -363,27 +209,25 @@ function CirclePersonIcon() {
 
 function BriefcaseIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden className="h-5 w-5 fill-none stroke-current">
+    <svg viewBox="0 0 24 24" aria-hidden className="h-[18px] w-[18px] fill-none stroke-current">
       <rect x="4.5" y="7.5" width="15" height="10.5" rx="2" strokeWidth="1.4" />
-      <path d="M9 7.5V6.4c0-.9.7-1.6 1.6-1.6h2.8c.9 0 1.6.7 1.6 1.6v1.1" strokeWidth="1.4" />
-      <path d="M4.5 12.2h15" strokeWidth="1.4" />
+      <path d="M9 7.5V6.4c0-.9.7-1.6 1.6-1.6h2.8c.9 0 1.6.7 1.6 1.6v1.1M4.5 12.2h15" strokeWidth="1.4" />
     </svg>
   );
 }
 
 function DocumentIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden className="h-5 w-5 fill-none stroke-current">
+    <svg viewBox="0 0 24 24" aria-hidden className="h-[18px] w-[18px] fill-none stroke-current">
       <path d="M8 4.8h6l3 3v11.4c0 1-.8 1.8-1.8 1.8H8c-1 0-1.8-.8-1.8-1.8V6.6C6.2 5.6 7 4.8 8 4.8Z" strokeWidth="1.4" />
-      <path d="M14 4.8v3.3h3" strokeWidth="1.4" />
-      <path d="M9.2 12h5.6M9.2 15.2h5.6" strokeWidth="1.4" strokeLinecap="round" />
+      <path d="M14 4.8v3.3h3M9.2 12h5.6M9.2 15.2h5.6" strokeWidth="1.4" strokeLinecap="round" />
     </svg>
   );
 }
 
 function MailIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden className="h-5 w-5 fill-none stroke-current">
+    <svg viewBox="0 0 24 24" aria-hidden className="h-[18px] w-[18px] fill-none stroke-current">
       <rect x="4.5" y="6.5" width="15" height="11" rx="2" strokeWidth="1.4" />
       <path d="m6.5 8.3 5.5 4.6 5.5-4.6" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
     </svg>

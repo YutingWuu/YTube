@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Yuting Wu | Welcome to my world",
   description:
-    "A cinematic portfolio for Yuting Wu across growth, product, analytics, and creative systems.",
+    "A private visual journal of quiet rooms, steady work, and mountains outside the window.",
 };
 
 export default function RootLayout({
