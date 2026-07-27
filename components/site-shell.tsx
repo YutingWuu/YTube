@@ -30,7 +30,7 @@ export default function SiteShell({
           <nav className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-6 sm:px-10">
             <Link
               href="/"
-              className="pointer-events-auto inline-flex items-center gap-3 text-xs uppercase tracking-[0.42em] text-white/85 transition hover:text-white"
+              className="pointer-events-auto inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.42em] text-white/88 transition hover:text-white"
             >
               <span
                 aria-hidden
@@ -38,7 +38,7 @@ export default function SiteShell({
               />
               Yuting Wu
             </Link>
-            <div className="pointer-events-auto flex items-center gap-5 text-[11px] uppercase tracking-[0.3em] text-white/70 sm:gap-8">
+            <div className="pointer-events-auto flex items-center gap-5 text-[11px] uppercase tracking-[0.32em] text-white/76 sm:gap-8">
               {homeNavLinks.map((link) => (
                 <Link
                   key={link.href}

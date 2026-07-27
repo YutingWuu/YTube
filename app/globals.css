@@ -70,10 +70,10 @@ button {
 
 .hero-title-main {
   font-family: var(--font-hero);
-  font-size: clamp(4.25rem, 9vw, 8.1rem);
-  line-height: 0.88;
-  letter-spacing: -0.055em;
-  text-shadow: 0 12px 36px rgba(0, 0, 0, 0.18);
+  font-size: clamp(3.9rem, 8.1vw, 7.45rem);
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  text-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
 }
 
 .hero-copy,

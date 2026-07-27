@@ -46,29 +46,57 @@ export default function Home() {
         <img
           src={withBasePath("/welcome-world-field.png")}
           alt="A wide Grand Teton field beneath snow-capped mountains"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="absolute inset-0 h-full w-full object-cover object-[60%_48%] sm:object-[58%_46%]"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(11,16,13,0.27)_0%,rgba(11,16,13,0.08)_42%,rgba(11,16,13,0.13)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(5,8,7,0)_0%,rgba(5,8,7,0.03)_24%,rgba(5,8,7,0.12)_48%,rgba(5,8,7,0.26)_72%,rgba(5,8,7,0.38)_100%),linear-gradient(98deg,rgba(5,10,8,0.82)_4%,rgba(5,10,8,0.58)_28%,rgba(5,10,8,0.18)_56%,rgba(5,10,8,0.1)_100%)]" />
         <div className="absolute inset-x-0 bottom-0 h-56 bg-[linear-gradient(180deg,rgba(105,108,102,0)_0%,rgba(116,113,105,0.44)_68%,#b4b2aa_100%)]" />
 
         <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-6 pb-9 pt-28 sm:px-10 sm:pt-32">
-          <div className="hero-dock max-w-3xl pt-[7vh] sm:pt-[9vh]">
+          <div className="hero-dock max-w-[44rem] pt-[8vh] sm:pt-[12vh] lg:pt-[15vh]">
+            <div className="flex items-center gap-3 text-white/88">
+              <span
+                aria-hidden
+                className="h-px w-9 bg-[linear-gradient(90deg,rgba(244,241,232,0.96),rgba(244,241,232,0.18))]"
+              />
+              <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-white/88">
+                GROWTH PRODUCT &amp; ANALYTICS OPERATOR
+              </p>
+            </div>
             <h1 className="hero-title text-white">
-              <span data-line className="hero-title-main">
+              <span data-line className="hero-title-main mt-7 block max-w-[12ch]">
                 Welcome
                 <br />
                 to my world
               </span>
             </h1>
-            <p className="hero-copy mt-7 max-w-xs text-[0.9rem] leading-7 text-white/80 sm:text-base">
-              A quiet room inside.
-              <br />
-              Mountains waiting outside.
-            </p>
+            <div className="hero-copy mt-7 max-w-[35rem] space-y-2 text-[0.96rem] leading-[1.6] text-white/88 sm:text-[1.02rem]">
+              <p>
+                I build growth systems across product, data, creative, and
+                acquisition.
+              </p>
+              <p lang="zh-CN" className="text-white/84">
+                把增长拆成可验证、可迭代、能持续复利的系统。
+              </p>
+              <p className="text-white/78">
+                Clear signals. Better decisions. Work that compounds.
+              </p>
+            </div>
+            <Link
+              href="/case-studies/"
+              className="group mt-9 inline-flex items-center gap-3 rounded-full border border-[#9aa574]/80 bg-[#68744d]/88 px-6 py-3 text-[11px] uppercase tracking-[0.28em] text-[#f3f0e5] shadow-[0_14px_28px_rgba(11,16,13,0.18)] transition hover:border-[#c9d0b0] hover:bg-[#77835b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#edf0e3]"
+            >
+              <span>Explore the work</span>
+              <span className="relative inline-flex items-center">
+                <span className="transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+                <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-[#f3f0e5]/80 transition-transform duration-300 group-hover:scale-x-100" />
+              </span>
+            </Link>
           </div>
 
-          <div className="mt-auto flex justify-end pt-12">
-            <div className="hero-dock flex items-center gap-2.5">
+          <div className="mt-auto flex justify-end pt-14">
+            <div className="hero-dock flex flex-wrap items-start justify-end gap-3 sm:gap-4">
               <IconLink href="/about/" label="About">
                 <CirclePersonIcon />
               </IconLink>
@@ -78,7 +106,7 @@ export default function Home() {
               <IconLink href="/resume/" label="Resume">
                 <DocumentIcon />
               </IconLink>
-              <IconLink href="mailto:t112255zl@gmail.com" label="Mail">
+              <IconLink href="mailto:t112255zl@gmail.com" label="Contact">
                 <MailIcon />
               </IconLink>
             </div>
@@ -180,19 +208,23 @@ function IconLink({
   children: React.ReactNode;
 }) {
   const className =
-    "inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/30 text-white/88 transition hover:border-white/80 hover:bg-white/10 hover:text-white";
+    "group inline-flex w-[4.65rem] flex-col items-center gap-2 text-center text-[10px] uppercase tracking-[0.22em] text-white/72 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white/85";
+  const shellClassName =
+    "inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/28 bg-white/4 text-white/88 transition group-hover:border-white/80 group-hover:bg-white/10 group-hover:text-white";
 
   if (href.startsWith("mailto:")) {
     return (
       <a href={href} aria-label={label} className={className}>
-        {children}
+        <span className={shellClassName}>{children}</span>
+        <span>{label}</span>
       </a>
     );
   }
 
   return (
     <Link href={href} aria-label={label} className={className}>
-      {children}
+      <span className={shellClassName}>{children}</span>
+      <span>{label}</span>
     </Link>
   );
 }
