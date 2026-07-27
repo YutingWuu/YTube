@@ -39,7 +39,7 @@ const dayFrames = [
 
 export default function Home() {
   return (
-    <div className="bg-[#b4b2aa] text-[#20231f]">
+    <div className="bg-[#96a095] text-[#20231f]">
       <section className="relative min-h-screen overflow-hidden bg-[#58615b] text-white">
         {/* Static export on GitHub Pages needs a literal base-path-aware image URL. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -49,7 +49,7 @@ export default function Home() {
           className="absolute inset-0 h-full w-full object-cover object-[60%_48%] sm:object-[58%_46%]"
         />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(5,8,7,0)_0%,rgba(5,8,7,0.03)_24%,rgba(5,8,7,0.12)_48%,rgba(5,8,7,0.26)_72%,rgba(5,8,7,0.38)_100%),linear-gradient(98deg,rgba(5,10,8,0.82)_4%,rgba(5,10,8,0.58)_28%,rgba(5,10,8,0.18)_56%,rgba(5,10,8,0.1)_100%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-56 bg-[linear-gradient(180deg,rgba(105,108,102,0)_0%,rgba(116,113,105,0.44)_68%,#b4b2aa_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-56 bg-[linear-gradient(180deg,rgba(105,108,102,0)_0%,rgba(109,117,108,0.42)_68%,#96a095_100%)]" />
 
         <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-6 pb-9 pt-28 sm:px-10 sm:pt-32">
           <div className="hero-dock max-w-[44rem] pt-[8vh] sm:pt-[12vh] lg:pt-[15vh]">
@@ -59,7 +59,7 @@ export default function Home() {
                 className="h-px w-9 bg-[linear-gradient(90deg,rgba(244,241,232,0.96),rgba(244,241,232,0.18))]"
               />
               <p className="text-[11px] font-medium uppercase tracking-[0.32em] text-white/88">
-                GROWTH PRODUCT &amp; ANALYTICS OPERATOR
+                A QUIET DAY, HELD IN RHYTHM
               </p>
             </div>
             <h1 className="hero-title text-white">
@@ -71,26 +71,25 @@ export default function Home() {
             </h1>
             <div className="hero-copy mt-7 max-w-[35rem] space-y-2 text-[0.96rem] leading-[1.6] text-white/88 sm:text-[1.02rem]">
               <p>
-                I build growth systems across product, data, creative, and
-                acquisition.
+                I like wide grass, late light, and a life with room to breathe.
               </p>
               <p lang="zh-CN" className="text-white/84">
-                把增长拆成可验证、可迭代、能持续复利的系统。
+                我喜欢辽阔，也喜欢有秩序地过每一天。
               </p>
               <p className="text-white/78">
-                Clear signals. Better decisions. Work that compounds.
+                The work is here too, but first this is where I begin.
               </p>
             </div>
             <Link
-              href="/case-studies/"
-              className="group mt-9 inline-flex items-center gap-3 rounded-full border border-[#9aa574]/80 bg-[#68744d]/88 px-6 py-3 text-[11px] uppercase tracking-[0.28em] text-[#f3f0e5] shadow-[0_14px_28px_rgba(11,16,13,0.18)] transition hover:border-[#c9d0b0] hover:bg-[#77835b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#edf0e3]"
+              href="#day-title"
+              className="group mt-9 inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.32em] text-white/86 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#edf0e3]"
             >
-              <span>Explore the work</span>
-              <span className="relative inline-flex items-center">
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-                <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-[#f3f0e5]/80 transition-transform duration-300 group-hover:scale-x-100" />
+              <span className="relative pb-1">
+                Follow the day
+                <span className="absolute inset-x-0 bottom-0 h-px bg-white/48 transition group-hover:bg-white/80" />
+              </span>
+              <span className="inline-flex items-center pb-1 transition-transform duration-300 group-hover:translate-x-1">
+                →
               </span>
             </Link>
           </div>
@@ -114,12 +113,12 @@ export default function Home() {
         </div>
       </section>
 
-      <main className="bg-[linear-gradient(180deg,#b4b2aa_0%,#dedbd1_18%,#ece8dc_72%,#d3d0c6_100%)] pb-24 pt-14 sm:pt-20">
+      <main className="bg-[radial-gradient(circle_at_top,rgba(217,220,213,0.38)_0%,rgba(217,220,213,0)_34%),linear-gradient(180deg,#96a095_0%,#adb5ad_18%,#c5cbc5_66%,#b2b8b1_100%)] pb-24 pt-14 sm:pt-20">
         <section aria-labelledby="day-title">
           <div className="mx-auto flex max-w-7xl items-end justify-between gap-6 px-6 sm:px-10">
             <div>
               <p className="text-[10px] uppercase tracking-[0.28em] text-[#4b514a]">
-                Thursday, in four moments
+                From morning to night
               </p>
               <h2
                 id="day-title"
@@ -129,7 +128,7 @@ export default function Home() {
               </h2>
             </div>
             <p className="hidden max-w-40 text-right text-xs leading-5 text-[#596057] sm:block">
-              Still images now. Motion will live here later.
+              Small records of an ordinary rhythm.
             </p>
           </div>
           <DayReel items={dayFrames} />
@@ -145,15 +144,15 @@ export default function Home() {
                 The room is small enough for concentration.
               </h2>
               <p className="mt-5 max-w-xl text-base leading-8 text-[#4f554d]">
-                I like a clear desk, a readable plan, and work that can be
-                returned to without noise. The rules are not restrictive. They
-                leave more room for what matters.
+                I like a clear desk, a readable plan, and mornings that begin
+                without hurry. The rules are not restrictive. They make the day
+                feel spacious enough to hold both work and life.
               </p>
               <Link
                 href="/case-studies/"
                 className="mt-7 inline-flex border-b border-[#4d554d] pb-1 text-sm text-[#30362f] transition hover:border-transparent"
               >
-                Read the work
+                The work lives here too
               </Link>
             </div>
 
@@ -170,7 +169,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div id="night" className="scroll-mt-24 border-t border-[#9c9b92] pt-8 lg:col-span-12">
+            <div id="night" className="scroll-mt-24 border-t border-[#90968e] pt-8 lg:col-span-12">
               <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
                 <div>
                   <p className="text-[10px] uppercase tracking-[0.28em] text-[#596057]">
@@ -182,10 +181,16 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex gap-5 text-sm text-[#4d554d]">
-                  <Link href="/about/" className="border-b border-[#777b72] pb-1 transition hover:border-transparent">
+                  <Link
+                    href="/about/"
+                    className="border-b border-[#777b72] pb-1 transition hover:border-transparent"
+                  >
                     About
                   </Link>
-                  <Link href="/resume/" className="border-b border-[#777b72] pb-1 transition hover:border-transparent">
+                  <Link
+                    href="/resume/"
+                    className="border-b border-[#777b72] pb-1 transition hover:border-transparent"
+                  >
                     Resume
                   </Link>
                 </div>
@@ -234,7 +239,11 @@ function CirclePersonIcon() {
     <svg viewBox="0 0 24 24" aria-hidden className="h-[18px] w-[18px] fill-none stroke-current">
       <circle cx="12" cy="12" r="9" strokeWidth="1.4" />
       <circle cx="12" cy="9" r="2.3" strokeWidth="1.4" />
-      <path d="M7.8 16.6c1-1.9 2.5-2.9 4.2-2.9s3.2 1 4.2 2.9" strokeWidth="1.4" strokeLinecap="round" />
+      <path
+        d="M7.8 16.6c1-1.9 2.5-2.9 4.2-2.9s3.2 1 4.2 2.9"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
@@ -243,7 +252,10 @@ function BriefcaseIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden className="h-[18px] w-[18px] fill-none stroke-current">
       <rect x="4.5" y="7.5" width="15" height="10.5" rx="2" strokeWidth="1.4" />
-      <path d="M9 7.5V6.4c0-.9.7-1.6 1.6-1.6h2.8c.9 0 1.6.7 1.6 1.6v1.1M4.5 12.2h15" strokeWidth="1.4" />
+      <path
+        d="M9 7.5V6.4c0-.9.7-1.6 1.6-1.6h2.8c.9 0 1.6.7 1.6 1.6v1.1M4.5 12.2h15"
+        strokeWidth="1.4"
+      />
     </svg>
   );
 }
@@ -251,8 +263,15 @@ function BriefcaseIcon() {
 function DocumentIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden className="h-[18px] w-[18px] fill-none stroke-current">
-      <path d="M8 4.8h6l3 3v11.4c0 1-.8 1.8-1.8 1.8H8c-1 0-1.8-.8-1.8-1.8V6.6C6.2 5.6 7 4.8 8 4.8Z" strokeWidth="1.4" />
-      <path d="M14 4.8v3.3h3M9.2 12h5.6M9.2 15.2h5.6" strokeWidth="1.4" strokeLinecap="round" />
+      <path
+        d="M8 4.8h6l3 3v11.4c0 1-.8 1.8-1.8 1.8H8c-1 0-1.8-.8-1.8-1.8V6.6C6.2 5.6 7 4.8 8 4.8Z"
+        strokeWidth="1.4"
+      />
+      <path
+        d="M14 4.8v3.3h3M9.2 12h5.6M9.2 15.2h5.6"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
@@ -261,7 +280,12 @@ function MailIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden className="h-[18px] w-[18px] fill-none stroke-current">
       <rect x="4.5" y="6.5" width="15" height="11" rx="2" strokeWidth="1.4" />
-      <path d="m6.5 8.3 5.5 4.6 5.5-4.6" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="m6.5 8.3 5.5 4.6 5.5-4.6"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }

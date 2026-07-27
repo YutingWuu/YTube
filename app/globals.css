@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --site-bg: #ece8dc;
+  --site-bg: #c5cbc5;
   --site-fg: #20231f;
-  --paper: #ece8dc;
+  --paper: #c5cbc5;
   --ink: #20231f;
   --font-ui: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
   --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua",

@@ -3,9 +3,9 @@ import SiteShell from "@/components/site-shell";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Yuting Wu | Growth Product & Analytics",
+  title: "Yuting Wu | Welcome to my world",
   description:
-    "Growth product and analytics portfolio by Yuting Wu, shaped around product judgment, acquisition systems, and work that compounds.",
+    "A quiet personal world of wide fields, steady routines, and the work woven through them.",
 };
 
 export default function RootLayout({
