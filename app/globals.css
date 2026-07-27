@@ -8,6 +8,8 @@
   --m-yellow: #e8bf2a;
   --m-red: #e04b36;
   --m-blue: #4a6fe0;
+  --olive: #66723a;
+  --olive-bright: #7c8a49;
 }
 
 @theme inline {
@@ -16,6 +18,8 @@
   --color-m-yellow: var(--m-yellow);
   --color-m-red: var(--m-red);
   --color-m-blue: var(--m-blue);
+  --color-olive: var(--olive);
+  --color-olive-bright: var(--olive-bright);
 }
 
 body {
@@ -36,6 +40,27 @@ body {
 
 .block-pulse {
   animation: block-pulse 5s ease-in-out infinite;
+}
+
+/*
+ * Hero overlay: transparent at top-center/right of the sky, deepening
+ * toward the bottom-left where the text block sits, so text meets
+ * WCAG AA contrast against any part of the photo.
+ */
+.hero-overlay {
+  background:
+    linear-gradient(
+      to top right,
+      rgba(10, 9, 7, 0.94) 0%,
+      rgba(10, 9, 7, 0.6) 34%,
+      rgba(10, 9, 7, 0.18) 62%,
+      rgba(10, 9, 7, 0) 82%
+    ),
+    linear-gradient(
+      to top,
+      rgba(10, 9, 7, 0.7) 0%,
+      rgba(10, 9, 7, 0) 55%
+    );
 }
 
 /* Story chapters drift up as they enter the viewport */

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a2647"/>
+      <stop offset="0.45" stop-color="#3a4d78"/>
+      <stop offset="0.72" stop-color="#8a7f8f"/>
+      <stop offset="0.86" stop-color="#c79a6b"/>
+      <stop offset="1" stop-color="#d9ab77"/>
+    </linearGradient>
+    <linearGradient id="field" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6f6a3e"/>
+      <stop offset="0.5" stop-color="#3d3f23"/>
+      <stop offset="1" stop-color="#181a10"/>
+    </linearGradient>
+  </defs>
+
+  <!-- sky -->
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+
+  <!-- faint stars, upper sky -->
+  <g fill="#e9ecf5" opacity="0.5">
+    <circle cx="180" cy="90" r="1.4"/><circle cx="420" cy="60" r="1.1"/>
+    <circle cx="650" cy="120" r="1.5"/><circle cx="900" cy="70" r="1.2"/>
+    <circle cx="1180" cy="110" r="1.4"/><circle cx="1350" cy="70" r="1.1"/>
+    <circle cx="300" cy="160" r="1.1"/><circle cx="1050" cy="150" r="1.2"/>
+  </g>
+
+  <!-- far range -->
+  <path d="M0 560 L160 500 L320 545 L470 470 L620 540 L780 460 L940 535 L1120 480 L1280 545 L1450 500 L1600 555 L1600 640 L0 640 Z"
+        fill="#2b3557" opacity="0.85"/>
+
+  <!-- Teton-like peaks -->
+  <path d="M0 640 L220 470 L360 560 L520 360 L640 560 L760 300 L900 470 L1010 400 L1180 560 L1340 440 L1470 540 L1600 470 L1600 720 L0 720 Z"
+        fill="#20263f"/>
+  <!-- snow hints on the main peak -->
+  <path d="M760 300 L800 360 L775 372 L740 355 L760 300 Z" fill="#cdd6e6" opacity="0.8"/>
+  <path d="M520 360 L556 420 L534 430 L500 405 L520 360 Z" fill="#cdd6e6" opacity="0.65"/>
+
+  <!-- grass field -->
+  <rect y="700" width="1600" height="300" fill="url(#field)"/>
+  <path d="M0 700 Q400 672 820 700 T1600 700 L1600 1000 L0 1000 Z" fill="url(#field)"/>
+
+  <!-- grass texture strokes -->
+  <g stroke="#20220f" stroke-width="2" opacity="0.5">
+    <path d="M120 1000 C110 940 130 900 118 860" fill="none"/>
+    <path d="M300 1000 C292 950 308 910 300 880" fill="none"/>
+    <path d="M520 1000 C512 950 528 915 520 885" fill="none"/>
+    <path d="M1180 1000 C1172 948 1188 908 1180 878" fill="none"/>
+    <path d="M1380 1000 C1372 952 1388 912 1380 882" fill="none"/>
+  </g>
+
+  <!-- lone figure, right third, standing in the field -->
+  <g fill="#111309" opacity="0.92" transform="translate(1120 705)">
+    <ellipse cx="0" cy="150" rx="34" ry="8" fill="#0d0f07" opacity="0.6"/>
+    <circle cx="0" cy="12" r="15"/>
+    <path d="M-16 30 Q0 22 16 30 L21 96 Q0 104 -21 96 Z"/>
+    <rect x="-18" y="94" width="14" height="58" rx="6"/>
+    <rect x="4" y="94" width="14" height="58" rx="6"/>
+  </g>
+</svg>

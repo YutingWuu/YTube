@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { Squares } from "@/components/mondrian";
+import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Yuting Wu — Portfolio",
   description:
-    "Growth Product & Analytics Operator — building and optimizing growth systems across data, product, creative, and acquisition channels.",
+    "Product, Growth & Data Analytics — using SQL, experimentation, and user behavior data to diagnose problems, improve digital products, and support measurable growth.",
 };
 
 export default function RootLayout({
@@ -16,25 +15,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex min-h-screen flex-col antialiased">
-        <header className="border-b-[3px] border-ink">
-          <nav className="mx-auto flex w-full max-w-4xl items-center justify-between px-6 py-5">
-            <Link href="/" className="flex items-center gap-3">
-              <Squares />
-              <span className="font-serif text-lg font-semibold tracking-tight">
-                Yuting Wu
-              </span>
-            </Link>
-            <div className="flex gap-6 font-mono text-xs uppercase tracking-[0.18em]">
-              <Link href="/about/" className="hover:text-m-red">
-                About
-              </Link>
-              <Link href="/resume/" className="hover:text-m-blue">
-                Resume
-              </Link>
-            </div>
-          </nav>
-        </header>
+      <body className="flex min-h-screen flex-col overflow-x-hidden antialiased">
+        <SiteHeader />
         <main className="mx-auto w-full max-w-4xl flex-1 px-6 py-12">
           {children}
         </main>

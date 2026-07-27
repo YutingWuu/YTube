@@ -1,28 +1,12 @@
 import Link from "next/link";
 import { caseStudies, positioning } from "@/lib/projects";
-import { Boogie, Squares, accentBg } from "@/components/mondrian";
+import { accentBg } from "@/components/mondrian";
+import { Hero } from "@/components/hero";
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-16">
-      <section className="grid items-center gap-10 md:grid-cols-[1.15fr_0.85fr]">
-        <div>
-          <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.22em] opacity-70">
-            <Squares size="h-2 w-2" />
-            {positioning.title}
-          </p>
-          <h1 className="mt-5 font-serif text-5xl leading-[1.05] tracking-tight sm:text-6xl">
-            Yuting Wu
-          </h1>
-          <p className="mt-5 max-w-xl text-lg leading-relaxed opacity-80">
-            {positioning.statement}
-          </p>
-          <p className="mt-3 max-w-xl leading-relaxed opacity-70">
-            {positioning.statement2}
-          </p>
-        </div>
-        <Boogie className="mx-auto md:mx-0 md:justify-self-end" />
-      </section>
+      <Hero />
 
       <section className="border-2 border-ink">
         <div aria-hidden className="flex h-2 w-full">
@@ -40,7 +24,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section id="work" className="scroll-mt-8">
         <div className="flex items-baseline justify-between border-b-[3px] border-ink pb-3">
           <h2 className="font-serif text-2xl tracking-tight">
             My story, in three parts
