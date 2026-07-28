@@ -5,11 +5,11 @@ import { withBasePath } from "@/lib/site";
 const dayFrames = [
   {
     time: "07:10",
-    place: "the mirror",
+    place: "the body",
     note: "starting with the body before anything else",
     imageSrc: "/day-gym.jpg",
     imagePosition: "center 36%",
-    href: "#inside",
+    href: "#essay",
     orientation: "portrait" as const,
     row: 1 as const,
   },
@@ -19,27 +19,17 @@ const dayFrames = [
     note: "movement first, before the screen begins to speak",
     imageSrc: "/day-tennis.png",
     imagePosition: "center 48%",
-    href: "#outside",
-    orientation: "portrait" as const,
-    row: 1 as const,
-  },
-  {
-    time: "10:15",
-    place: "the tools",
-    note: "clear desk, clean keys, no extra noise",
-    imageSrc: "/day-keyboard.png",
-    imagePosition: "center 58%",
-    href: "#inside",
+    href: "#essay",
     orientation: "portrait" as const,
     row: 1 as const,
   },
   {
     time: "11:40",
-    place: "by the window",
+    place: "the window",
     note: "work feels lighter when the frame stays open",
     imageSrc: "/day-window-work.png",
     imagePosition: "center 52%",
-    href: "#inside",
+    href: "#essay",
     orientation: "landscape" as const,
     row: 1 as const,
   },
@@ -54,42 +44,32 @@ const dayFrames = [
     row: 2 as const,
   },
   {
-    time: "16:35",
-    place: "the city edge",
-    note: "glass towers, trees, and a little distance from the day",
-    imageSrc: "/day-city-park.jpg",
-    imagePosition: "center 54%",
-    href: "#outside",
-    orientation: "portrait" as const,
-    row: 2 as const,
-  },
-  {
     time: "17:20",
-    place: "the green",
+    place: "the park",
     note: "shade, benches, and the ordinary calm of other people",
     imageSrc: "/day-green-park.jpg",
     imagePosition: "center 52%",
-    href: "#outside",
+    href: "#essay",
     orientation: "landscape" as const,
     row: 2 as const,
   },
   {
     time: "19:40",
-    place: "the museum",
+    place: "the gallery",
     note: "looking closely is another way of slowing down",
     imageSrc: "/day-museum.jpg",
     imagePosition: "center 44%",
-    href: "#outside",
+    href: "#essay",
     orientation: "portrait" as const,
     row: 2 as const,
   },
   {
     time: "22:10",
-    place: "home again",
+    place: "the room",
     note: "lamplight, a screen, and the day folding back into itself",
     imageSrc: "/day-evening-room.jpg",
     imagePosition: "center 48%",
-    href: "#night",
+    href: "#essay",
     orientation: "portrait" as const,
     row: 2 as const,
   },
@@ -97,7 +77,7 @@ const dayFrames = [
 
 export default function Home() {
   return (
-    <div className="bg-[#bfc8cb] text-[#20231f]">
+    <div className="bg-[#d9dddc] text-[#20231f]">
       <section className="relative min-h-screen overflow-hidden bg-[#5f6c71] text-white">
         {/* Static export on GitHub Pages needs a literal base-path-aware image URL. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -107,7 +87,7 @@ export default function Home() {
           className="absolute inset-0 h-full w-full object-cover object-[60%_48%] sm:object-[58%_46%]"
         />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(7,13,16,0)_0%,rgba(7,13,16,0.04)_24%,rgba(7,13,16,0.14)_48%,rgba(7,13,16,0.28)_72%,rgba(7,13,16,0.42)_100%),linear-gradient(98deg,rgba(8,14,16,0.8)_4%,rgba(8,14,16,0.56)_28%,rgba(8,14,16,0.18)_56%,rgba(8,14,16,0.12)_100%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-56 bg-[linear-gradient(180deg,rgba(111,122,126,0)_0%,rgba(111,122,126,0.4)_68%,#bfc8cb_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-56 bg-[linear-gradient(180deg,rgba(111,122,126,0)_0%,rgba(111,122,126,0.4)_68%,#d9dddc_100%)]" />
 
         <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-6 pb-9 pt-28 sm:px-10 sm:pt-32">
           <div className="hero-dock max-w-[44rem] pt-[8vh] sm:pt-[12vh] lg:pt-[15vh]">
@@ -177,23 +157,26 @@ export default function Home() {
           <div className="mx-auto flex max-w-7xl items-end justify-between gap-6 px-6 sm:px-10">
             <div>
               <p className="text-[10px] uppercase tracking-[0.28em] text-[#566168]">
-                Movement, work, and air
+                A chosen sequence
               </p>
               <h2
                 id="day-title"
                 className="mt-3 [font-family:var(--font-display)] text-3xl tracking-tight text-[#232724] sm:text-4xl"
               >
-                A day I know by heart.
+                A day I want to keep.
               </h2>
             </div>
             <p className="hidden max-w-44 text-right text-xs leading-5 text-[#5f6967] sm:block">
-              A two-line record that feels closer to an actual life.
+              One path, no repeats, only the moments that still feel true.
             </p>
           </div>
           <DayReel items={dayFrames} />
         </section>
 
-        <section className="mx-auto mt-24 max-w-7xl px-6 sm:mt-32 sm:px-10">
+        <section
+          id="essay"
+          className="mx-auto mt-24 max-w-7xl px-6 sm:mt-32 sm:px-10"
+        >
           <div className="border-t border-white/45 pt-8">
             <div className="max-w-4xl">
               <p className="text-[10px] uppercase tracking-[0.28em] text-[#566168]">
@@ -210,10 +193,10 @@ export default function Home() {
             <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16">
               <div className="space-y-6 text-[1.02rem] leading-8 text-[#4f5857]">
                 <p>
-                  For a long time, I thought freedom would arrive as the
-                  result of achievement. A better job, more money, a stronger
-                  sense of security, and one day I would finally feel that my
-                  life belonged to me.
+                  For a long time, I thought freedom would arrive as the result
+                  of achievement. A better job, more money, a stronger sense of
+                  security, and one day I would finally feel that my life
+                  belonged to me.
                 </p>
                 <p>
                   Now I see freedom differently. It is less a destination than
@@ -223,20 +206,20 @@ export default function Home() {
                 </p>
                 <p>
                   I still care about work and ambition. I like the quiet
-                  satisfaction of understanding a difficult problem, finding
-                  the structure hidden inside confusion, and turning an idea
-                  into something useful. I want my work to carry both precision
-                  and feeling. I want to understand systems without losing
-                  sight of the people living inside them.
+                  satisfaction of understanding a difficult problem, finding the
+                  structure hidden inside confusion, and turning an idea into
+                  something useful. I want my work to carry both precision and
+                  feeling. I want to understand systems without losing sight of
+                  the people living inside them.
                 </p>
                 <p>
                   Perhaps this is why understanding matters so much to me. Each
                   time I see something more clearly, the world feels less
                   distant. A pattern in data, a motive behind someone&apos;s
                   behavior, the reason a relationship changes, the logic beneath
-                  an ordinary decision. Understanding gives shape to
-                  experience. It helps me move through life with greater
-                  steadiness, and it also makes life more vivid.
+                  an ordinary decision. Understanding gives shape to experience.
+                  It helps me move through life with greater steadiness, and it
+                  also makes life more vivid.
                 </p>
                 <p>
                   I want to create for the same reason. Creation is my way of
@@ -250,8 +233,8 @@ export default function Home() {
                   The life I hope to build has room for all of this. Focused
                   work, a healthy body, clear and mutual relationships, quiet
                   mornings, good food, travel, beauty, and time that still
-                  feels like my own. I do not need every day to be remarkable.
-                  I only want to feel present inside it.
+                  feels like my own. I do not need every day to be remarkable. I
+                  only want to feel present inside it.
                 </p>
                 <p>
                   In the end, the life I want is simple to describe. I want to

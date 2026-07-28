@@ -50,24 +50,6 @@ button {
   }
 }
 
-@keyframes reel-drift {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes reel-drift-reverse {
-  from {
-    transform: translateX(-50%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
 .hero-title [data-line] {
   display: block;
   animation: quiet-rise 900ms ease-out both;
@@ -99,7 +81,15 @@ button {
 }
 
 .day-reel {
-  overflow: clip;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+}
+
+.day-reel::-webkit-scrollbar {
+  display: none;
 }
 
 .day-reel-row {
@@ -107,18 +97,7 @@ button {
   width: max-content;
   gap: 1px;
   padding: 0 1.5rem;
-}
-
-.day-reel-row-top {
-  animation: reel-drift 50s linear infinite;
-}
-
-.day-reel-row-bottom {
-  animation: reel-drift-reverse 58s linear infinite;
-}
-
-.day-reel:hover .day-reel-row {
-  animation-play-state: paused;
+  scroll-snap-type: x proximity;
 }
 
 .day-reel-frame {
@@ -206,26 +185,13 @@ button {
 @media (prefers-reduced-motion: reduce) {
   .hero-title [data-line],
   .hero-copy,
-  .hero-dock,
-  .day-reel-row {
+  .hero-dock {
     animation: none;
   }
 }
 
 @media (max-width: 640px) {
-  .day-reel {
-    overflow-x: auto;
-    scrollbar-width: none;
-    touch-action: pan-x;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .day-reel::-webkit-scrollbar {
-    display: none;
-  }
-
   .day-reel-row {
-    animation: none;
     padding-bottom: 0.35rem;
   }
 

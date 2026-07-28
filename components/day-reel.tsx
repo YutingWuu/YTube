@@ -24,7 +24,7 @@ export default function DayReel({ items }: { items: DayReelItem[] }) {
   return (
     <div className="day-reel mt-9 space-y-1 sm:mt-11" aria-label="Moments from a day">
       <div className="day-reel-row day-reel-row-top">
-        {[...topRow, ...topRow].map((item, index) => (
+        {topRow.map((item, index) => (
           <DayReelFrame
             key={`top-${item.time}-${index}`}
             item={item}
@@ -33,7 +33,7 @@ export default function DayReel({ items }: { items: DayReelItem[] }) {
         ))}
       </div>
       <div className="day-reel-row day-reel-row-bottom">
-        {[...bottomRow, ...bottomRow].map((item, index) => (
+        {bottomRow.map((item, index) => (
           <DayReelFrame
             key={`bottom-${item.time}-${index}`}
             item={item}
