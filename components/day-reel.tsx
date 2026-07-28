@@ -11,15 +11,25 @@ type DayReelItem = {
   imageSrc: string;
   imagePosition: string;
   href: string;
+  orientation?: "portrait" | "landscape";
+  row?: 1 | 2;
   videoSrc?: string;
 };
 
 export default function DayReel({ items }: { items: DayReelItem[] }) {
+  const topRow = items.filter((item) => item.row !== 2);
+  const bottomRow = items.filter((item) => item.row === 2);
+
   return (
-    <div className="day-reel mt-9 sm:mt-11" aria-label="A day in four moments">
-      <div className="day-reel-track">
-        {[...items, ...items].map((item, index) => (
-          <DayReelFrame key={`${item.time}-${index}`} item={item} />
+    <div className="day-reel mt-9 space-y-1 sm:mt-11" aria-label="Moments from a day">
+      <div className="day-reel-row day-reel-row-top">
+        {[...topRow, ...topRow].map((item, index) => (
+          <DayReelFrame key={`top-${item.time}-${index}`} item={item} />
+        ))}
+      </div>
+      <div className="day-reel-row day-reel-row-bottom">
+        {[...bottomRow, ...bottomRow].map((item, index) => (
+          <DayReelFrame key={`bottom-${item.time}-${index}`} item={item} />
         ))}
       </div>
     </div>
@@ -43,7 +53,11 @@ function DayReelFrame({ item }: { item: DayReelItem }) {
   return (
     <Link
       href={item.href}
-      className="day-reel-frame"
+      className={`day-reel-frame ${
+        item.orientation === "portrait"
+          ? "day-reel-frame--portrait"
+          : "day-reel-frame--landscape"
+      }`}
       onMouseEnter={playPreview}
       onMouseLeave={stopPreview}
     >

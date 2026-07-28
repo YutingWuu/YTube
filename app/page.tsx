@@ -4,28 +4,54 @@ import { withBasePath } from "@/lib/site";
 
 const dayFrames = [
   {
-    time: "07:20",
-    place: "by the window",
-    note: "first light on the desk",
-    imageSrc: "/home-wallpaper-v3.png",
-    imagePosition: "center 60%",
+    time: "07:10",
+    place: "the mirror",
+    note: "starting with the body before anything else",
+    imageSrc: "/day-gym.jpg",
+    imagePosition: "center 36%",
     href: "#inside",
+    orientation: "portrait" as const,
+    row: 1 as const,
   },
   {
-    time: "10:40",
-    place: "the work table",
-    note: "one thing at a time",
-    imageSrc: "/welcome-world-field.png",
-    imagePosition: "center 64%",
-    href: "/case-studies/",
-  },
-  {
-    time: "18:16",
-    place: "past the window",
-    note: "the grass holds the last light",
-    imageSrc: "/welcome-world-field.png",
+    time: "08:40",
+    place: "the court",
+    note: "a small ritual of movement and repetition",
+    imageSrc: "/day-tennis.png",
     imagePosition: "center 48%",
     href: "#outside",
+    orientation: "portrait" as const,
+    row: 1 as const,
+  },
+  {
+    time: "11:20",
+    place: "by the window",
+    note: "work feels lighter with distance in the frame",
+    imageSrc: "/day-window-work.png",
+    imagePosition: "center 54%",
+    href: "#inside",
+    orientation: "landscape" as const,
+    row: 1 as const,
+  },
+  {
+    time: "13:40",
+    place: "the desk",
+    note: "one clear surface, one task at a time",
+    imageSrc: "/day-desk.jpg",
+    imagePosition: "center 60%",
+    href: "/case-studies/",
+    orientation: "landscape" as const,
+    row: 2 as const,
+  },
+  {
+    time: "17:50",
+    place: "the field",
+    note: "the world opens again after the work is done",
+    imageSrc: "/welcome-world-field.png",
+    imagePosition: "center 52%",
+    href: "#outside",
+    orientation: "landscape" as const,
+    row: 2 as const,
   },
   {
     time: "22:08",
@@ -34,6 +60,8 @@ const dayFrames = [
     imageSrc: "/home-wallpaper-v3.png",
     imagePosition: "center 76%",
     href: "#night",
+    orientation: "landscape" as const,
+    row: 2 as const,
   },
 ];
 
@@ -118,7 +146,7 @@ export default function Home() {
           <div className="mx-auto flex max-w-7xl items-end justify-between gap-6 px-6 sm:px-10">
             <div>
               <p className="text-[10px] uppercase tracking-[0.28em] text-[#4b514a]">
-                From morning to night
+                Movement, work, and air
               </p>
               <h2
                 id="day-title"
@@ -128,7 +156,7 @@ export default function Home() {
               </h2>
             </div>
             <p className="hidden max-w-40 text-right text-xs leading-5 text-[#596057] sm:block">
-              Small records of an ordinary rhythm.
+              A two-line record, closer to an actual day.
             </p>
           </div>
           <DayReel items={dayFrames} />

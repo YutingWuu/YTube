@@ -59,6 +59,15 @@ button {
   }
 }
 
+@keyframes reel-drift-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 .hero-title [data-line] {
   display: block;
   animation: quiet-rise 900ms ease-out both;
@@ -93,26 +102,42 @@ button {
   overflow: clip;
 }
 
-.day-reel-track {
+.day-reel-row {
   display: flex;
   width: max-content;
   gap: 1px;
   padding: 0 1.5rem;
+}
+
+.day-reel-row-top {
   animation: reel-drift 50s linear infinite;
 }
 
-.day-reel:hover .day-reel-track {
+.day-reel-row-bottom {
+  animation: reel-drift-reverse 58s linear infinite;
+}
+
+.day-reel:hover .day-reel-row {
   animation-play-state: paused;
 }
 
 .day-reel-frame {
   position: relative;
   display: block;
-  width: clamp(17rem, 28vw, 23rem);
-  aspect-ratio: 4 / 5;
   overflow: hidden;
   background: #7e8279;
   color: #f4f1e8;
+  flex: none;
+}
+
+.day-reel-frame--portrait {
+  width: clamp(13rem, 16vw, 16.5rem);
+  aspect-ratio: 4 / 5;
+}
+
+.day-reel-frame--landscape {
+  width: clamp(19rem, 30vw, 27rem);
+  aspect-ratio: 16 / 10;
 }
 
 .day-reel-image,
@@ -175,7 +200,7 @@ button {
   .hero-title [data-line],
   .hero-copy,
   .hero-dock,
-  .day-reel-track {
+  .day-reel-row {
     animation: none;
   }
 }
@@ -192,12 +217,16 @@ button {
     display: none;
   }
 
-  .day-reel-track {
+  .day-reel-row {
     animation: none;
     padding-bottom: 0.35rem;
   }
 
-  .day-reel-frame {
+  .day-reel-frame--portrait {
+    width: 46vw;
+  }
+
+  .day-reel-frame--landscape {
     width: 78vw;
   }
 }
