@@ -1,6 +1,5 @@
 import Link from "next/link";
 import DayReel from "@/components/day-reel";
-import WorldConstants from "@/components/world-constants";
 import { withBasePath } from "@/lib/site";
 
 const dayFrames = [
@@ -93,29 +92,6 @@ const dayFrames = [
     href: "#night",
     orientation: "portrait" as const,
     row: 2 as const,
-  },
-];
-
-const constants = [
-  {
-    label: "Morning light",
-    note: "The day starts best when it begins gently.",
-  },
-  {
-    label: "One-task focus",
-    note: "I like work that can be followed, not chased.",
-  },
-  {
-    label: "Movement",
-    note: "The body keeps the mind from becoming too narrow.",
-  },
-  {
-    label: "Wide air",
-    note: "A field, a park, a window, anything that restores distance.",
-  },
-  {
-    label: "Evening reset",
-    note: "Putting things back is part of how tomorrow begins.",
   },
 ];
 
@@ -217,74 +193,129 @@ export default function Home() {
           <DayReel items={dayFrames} />
         </section>
 
-        <section className="mx-auto mt-18 max-w-7xl px-6 sm:mt-24 sm:px-10">
-          <WorldConstants items={constants} />
-        </section>
-
         <section className="mx-auto mt-24 max-w-7xl px-6 sm:mt-32 sm:px-10">
-          <div className="grid gap-14 lg:grid-cols-12 lg:gap-x-16">
-            <div id="inside" className="scroll-mt-24 lg:col-span-7">
+          <div className="border-t border-white/45 pt-8">
+            <div className="max-w-4xl">
               <p className="text-[10px] uppercase tracking-[0.28em] text-[#566168]">
-                Inside
-              </p>
-              <h2 className="mt-4 max-w-xl [font-family:var(--font-display)] text-3xl leading-[1.02] tracking-tight text-[#232724] sm:text-4xl">
-                The room is small enough for concentration.
-              </h2>
-              <p className="mt-5 max-w-xl text-base leading-8 text-[#4f5857]">
-                I like a clear desk, a readable plan, and mornings that begin
-                without hurry. The rules are not restrictive. They make the day
-                feel spacious enough to hold both work and life.
-              </p>
-              <Link
-                href="/case-studies/"
-                className="mt-7 inline-flex border-b border-[#4d5556] pb-1 text-sm text-[#303637] transition hover:border-transparent"
-              >
-                The work lives here too
-              </Link>
-            </div>
-
-            <div id="outside" className="scroll-mt-24 lg:col-span-5">
-              <p className="text-[10px] uppercase tracking-[0.28em] text-[#566168]">
-                Outside
+                The Life I Am Learning to Choose
               </p>
               <h2 className="mt-4 [font-family:var(--font-display)] text-3xl leading-[1.02] tracking-tight text-[#232724] sm:text-4xl">
-                The view keeps the plan from becoming too small.
+                The Life I Am Learning to Choose
               </h2>
-              <p className="mt-5 text-base leading-8 text-[#4f5857]">
-                Trees, city edges, museums, a field at distance. The world
-                stays wide even when the structure of the day is ordinary.
+              <p className="mt-3 [font-family:var(--font-display)] text-2xl leading-tight text-[#3f4848] sm:text-3xl">
+                我正在学着选择的人生
               </p>
             </div>
 
-            <div
-              id="night"
-              className="scroll-mt-24 border-t border-white/45 pt-8 lg:col-span-12"
-            >
-              <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-[#566168]">
-                    At night
-                  </p>
-                  <p className="mt-3 max-w-xl [font-family:var(--font-display)] text-2xl leading-tight text-[#2f352e] sm:text-3xl">
-                    I put things back where they belong, so tomorrow has a
-                    place to begin.
-                  </p>
-                </div>
-                <div className="flex gap-5 text-sm text-[#4d5556]">
-                  <Link
-                    href="/about/"
-                    className="border-b border-[#7b8281] pb-1 transition hover:border-transparent"
-                  >
-                    About
-                  </Link>
-                  <Link
-                    href="/resume/"
-                    className="border-b border-[#7b8281] pb-1 transition hover:border-transparent"
-                  >
-                    Resume
-                  </Link>
-                </div>
+            <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16">
+              <div className="space-y-6 text-[1.02rem] leading-8 text-[#4f5857]">
+                <p>
+                  For a long time, I thought freedom would arrive as the
+                  result of achievement. A better job, more money, a stronger
+                  sense of security, and one day I would finally feel that my
+                  life belonged to me.
+                </p>
+                <p>
+                  Now I see freedom differently. It is less a destination than
+                  a way of living. It begins when I can hear my own judgment
+                  clearly, make choices without constantly explaining them, and
+                  allow my days to follow a rhythm that feels honest to me.
+                </p>
+                <p>
+                  I still care about work and ambition. I like the quiet
+                  satisfaction of understanding a difficult problem, finding
+                  the structure hidden inside confusion, and turning an idea
+                  into something useful. I want my work to carry both precision
+                  and feeling. I want to understand systems without losing
+                  sight of the people living inside them.
+                </p>
+                <p>
+                  Perhaps this is why understanding matters so much to me. Each
+                  time I see something more clearly, the world feels less
+                  distant. A pattern in data, a motive behind someone&apos;s
+                  behavior, the reason a relationship changes, the logic beneath
+                  an ordinary decision. Understanding gives shape to
+                  experience. It helps me move through life with greater
+                  steadiness, and it also makes life more vivid.
+                </p>
+                <p>
+                  I want to create for the same reason. Creation is my way of
+                  answering the world. It may become a product, an image, a
+                  piece of writing, or simply a thought expressed at the right
+                  moment. Its meaning lies in whether it reaches another person
+                  and leaves behind a small change in how they see, feel, or
+                  choose.
+                </p>
+                <p>
+                  The life I hope to build has room for all of this. Focused
+                  work, a healthy body, clear and mutual relationships, quiet
+                  mornings, good food, travel, beauty, and time that still
+                  feels like my own. I do not need every day to be remarkable.
+                  I only want to feel present inside it.
+                </p>
+                <p>
+                  In the end, the life I want is simple to describe. I want to
+                  understand the world more deeply, contribute something that
+                  carries my own voice, and remain awake to the life unfolding
+                  around me.
+                </p>
+                <p className="[font-family:var(--font-display)] text-[1.28rem] leading-8 text-[#2f3738]">
+                  Freedom gives me the space to become myself. Understanding
+                  teaches me how to live. Creation allows a part of me to
+                  remain.
+                </p>
               </div>
+
+              <div
+                id="night"
+                className="space-y-6 border-t border-white/35 pt-1 text-[1.02rem] leading-8 text-[#4f5857] lg:border-t-0 lg:border-l lg:border-white/35 lg:pl-16 lg:pt-0"
+              >
+                <p>
+                  很长一段时间里，我以为自由会在某种成就之后到来。找到更好的工作，拥有更多财富，积累足够的安全感，直到某一天，我终于能够确定，这一生真正属于我自己。
+                </p>
+                <p>
+                  后来我逐渐意识到，自由并不是终点，而是一种生活方式。它始于我能够听清自己的判断，不再需要为每一个选择反复解释，也能够让生活按照一种诚实、舒展的节奏向前展开。
+                </p>
+                <p>
+                  我依然在意事业，也依然有野心。我喜欢理解一个复杂问题时那种安静的满足感，喜欢从混乱中找到结构，再把模糊的想法变成真正有用的东西。我希望自己的工作既有精确的逻辑，也保留对人的感受。理解系统的同时，我不想忘记生活在系统中的人。
+                </p>
+                <p>
+                  也许正因如此，理解对我而言格外重要。每当我看清一件事，世界就离我更近一点。数据中的规律，一个人行为背后的动机，一段关系发生变化的原因，或者某个普通选择之下隐藏的逻辑。理解让经验有了形状，也让我能够更稳定地行走于生活之中。更重要的是，它让世界变得具体而鲜明。
+                </p>
+                <p>
+                  我想要创造，也是出于同样的原因。创造是我回应世界的方式。它可以是一件产品、一幅图像、一段文字，也可以是在恰当的时刻，被准确表达出来的一个想法。它真正的意义，在于是否抵达了另一个人，并悄悄改变了对方看待、感受或选择事物的方式。
+                </p>
+                <p>
+                  我希望建立的生活，可以容纳这一切。专注而有价值的工作，健康自由的身体，清晰而相互的关系，安静的早晨，好吃的食物，旅行，美，以及仍然真正属于自己的时间。我不需要每一天都显得精彩，只希望自己始终身处其中，而不是匆忙地从生活旁边经过。
+                </p>
+                <p>
+                  归根结底，我想要的人生并不复杂。我想更深地理解这个世界，留下带有自己声音的东西，也始终对正在发生的生活保持清醒。
+                </p>
+                <p className="[font-family:var(--font-display)] text-[1.28rem] leading-8 text-[#2f3738]">
+                  自由让我有空间成为自己，理解教会我如何生活，而创造，让我的一部分得以停留。
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-10 flex gap-5 text-sm text-[#4d5556]">
+              <Link
+                href="/about/"
+                className="border-b border-[#7b8281] pb-1 transition hover:border-transparent"
+              >
+                About
+              </Link>
+              <Link
+                href="/case-studies/"
+                className="border-b border-[#7b8281] pb-1 transition hover:border-transparent"
+              >
+                Work
+              </Link>
+              <Link
+                href="/resume/"
+                className="border-b border-[#7b8281] pb-1 transition hover:border-transparent"
+              >
+                Resume
+              </Link>
             </div>
           </div>
         </section>
