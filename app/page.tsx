@@ -1,5 +1,6 @@
 import Link from "next/link";
 import DayReel from "@/components/day-reel";
+import WorldConstants from "@/components/world-constants";
 import { withBasePath } from "@/lib/site";
 
 const dayFrames = [
@@ -16,7 +17,7 @@ const dayFrames = [
   {
     time: "08:40",
     place: "the court",
-    note: "a small ritual of movement and repetition",
+    note: "movement first, before the screen begins to speak",
     imageSrc: "/day-tennis.png",
     imagePosition: "center 48%",
     href: "#outside",
@@ -24,19 +25,29 @@ const dayFrames = [
     row: 1 as const,
   },
   {
-    time: "11:20",
+    time: "10:15",
+    place: "the tools",
+    note: "clear desk, clean keys, no extra noise",
+    imageSrc: "/day-keyboard.png",
+    imagePosition: "center 58%",
+    href: "#inside",
+    orientation: "portrait" as const,
+    row: 1 as const,
+  },
+  {
+    time: "11:40",
     place: "by the window",
-    note: "work feels lighter with distance in the frame",
+    note: "work feels lighter when the frame stays open",
     imageSrc: "/day-window-work.png",
-    imagePosition: "center 54%",
+    imagePosition: "center 52%",
     href: "#inside",
     orientation: "landscape" as const,
     row: 1 as const,
   },
   {
-    time: "13:40",
+    time: "14:20",
     place: "the desk",
-    note: "one clear surface, one task at a time",
+    note: "one task at a time, one clean surface to return to",
     imageSrc: "/day-desk.jpg",
     imagePosition: "center 60%",
     href: "/case-studies/",
@@ -44,31 +55,74 @@ const dayFrames = [
     row: 2 as const,
   },
   {
-    time: "17:50",
-    place: "the field",
-    note: "the world opens again after the work is done",
-    imageSrc: "/welcome-world-field.png",
+    time: "16:35",
+    place: "the city edge",
+    note: "glass towers, trees, and a little distance from the day",
+    imageSrc: "/day-city-park.jpg",
+    imagePosition: "center 54%",
+    href: "#outside",
+    orientation: "portrait" as const,
+    row: 2 as const,
+  },
+  {
+    time: "17:20",
+    place: "the green",
+    note: "shade, benches, and the ordinary calm of other people",
+    imageSrc: "/day-green-park.jpg",
     imagePosition: "center 52%",
     href: "#outside",
     orientation: "landscape" as const,
     row: 2 as const,
   },
   {
-    time: "22:08",
-    place: "home again",
-    note: "putting the day back in its place",
-    imageSrc: "/home-wallpaper-v3.png",
-    imagePosition: "center 76%",
-    href: "#night",
-    orientation: "landscape" as const,
+    time: "19:40",
+    place: "the museum",
+    note: "looking closely is another way of slowing down",
+    imageSrc: "/day-museum.jpg",
+    imagePosition: "center 44%",
+    href: "#outside",
+    orientation: "portrait" as const,
     row: 2 as const,
+  },
+  {
+    time: "22:10",
+    place: "home again",
+    note: "lamplight, a screen, and the day folding back into itself",
+    imageSrc: "/day-evening-room.jpg",
+    imagePosition: "center 48%",
+    href: "#night",
+    orientation: "portrait" as const,
+    row: 2 as const,
+  },
+];
+
+const constants = [
+  {
+    label: "Morning light",
+    note: "The day starts best when it begins gently.",
+  },
+  {
+    label: "One-task focus",
+    note: "I like work that can be followed, not chased.",
+  },
+  {
+    label: "Movement",
+    note: "The body keeps the mind from becoming too narrow.",
+  },
+  {
+    label: "Wide air",
+    note: "A field, a park, a window, anything that restores distance.",
+  },
+  {
+    label: "Evening reset",
+    note: "Putting things back is part of how tomorrow begins.",
   },
 ];
 
 export default function Home() {
   return (
-    <div className="bg-[#96a095] text-[#20231f]">
-      <section className="relative min-h-screen overflow-hidden bg-[#58615b] text-white">
+    <div className="bg-[#bfc8cb] text-[#20231f]">
+      <section className="relative min-h-screen overflow-hidden bg-[#5f6c71] text-white">
         {/* Static export on GitHub Pages needs a literal base-path-aware image URL. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -76,8 +130,8 @@ export default function Home() {
           alt="A wide Grand Teton field beneath snow-capped mountains"
           className="absolute inset-0 h-full w-full object-cover object-[60%_48%] sm:object-[58%_46%]"
         />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(5,8,7,0)_0%,rgba(5,8,7,0.03)_24%,rgba(5,8,7,0.12)_48%,rgba(5,8,7,0.26)_72%,rgba(5,8,7,0.38)_100%),linear-gradient(98deg,rgba(5,10,8,0.82)_4%,rgba(5,10,8,0.58)_28%,rgba(5,10,8,0.18)_56%,rgba(5,10,8,0.1)_100%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-56 bg-[linear-gradient(180deg,rgba(105,108,102,0)_0%,rgba(109,117,108,0.42)_68%,#96a095_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(7,13,16,0)_0%,rgba(7,13,16,0.04)_24%,rgba(7,13,16,0.14)_48%,rgba(7,13,16,0.28)_72%,rgba(7,13,16,0.42)_100%),linear-gradient(98deg,rgba(8,14,16,0.8)_4%,rgba(8,14,16,0.56)_28%,rgba(8,14,16,0.18)_56%,rgba(8,14,16,0.12)_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-56 bg-[linear-gradient(180deg,rgba(111,122,126,0)_0%,rgba(111,122,126,0.4)_68%,#bfc8cb_100%)]" />
 
         <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col px-6 pb-9 pt-28 sm:px-10 sm:pt-32">
           <div className="hero-dock max-w-[44rem] pt-[8vh] sm:pt-[12vh] lg:pt-[15vh]">
@@ -99,7 +153,8 @@ export default function Home() {
             </h1>
             <div className="hero-copy mt-7 max-w-[35rem] space-y-2 text-[0.96rem] leading-[1.6] text-white/88 sm:text-[1.02rem]">
               <p>
-                I like wide grass, late light, and a life with room to breathe.
+                I like wide grass, clear routines, and a life with room to
+                breathe.
               </p>
               <p lang="zh-CN" className="text-white/84">
                 我喜欢辽阔，也喜欢有秩序地过每一天。
@@ -141,66 +196,73 @@ export default function Home() {
         </div>
       </section>
 
-      <main className="bg-[radial-gradient(circle_at_top,rgba(217,220,213,0.38)_0%,rgba(217,220,213,0)_34%),linear-gradient(180deg,#96a095_0%,#adb5ad_18%,#c5cbc5_66%,#b2b8b1_100%)] pb-24 pt-14 sm:pt-20">
+      <main className="bg-[radial-gradient(circle_at_top,rgba(234,238,239,0.48)_0%,rgba(234,238,239,0)_28%),linear-gradient(180deg,#bfc8cb_0%,#c8d0d2_18%,#d9dddc_58%,#c7cecd_100%)] pb-24 pt-14 sm:pt-20">
         <section aria-labelledby="day-title">
           <div className="mx-auto flex max-w-7xl items-end justify-between gap-6 px-6 sm:px-10">
             <div>
-              <p className="text-[10px] uppercase tracking-[0.28em] text-[#4b514a]">
+              <p className="text-[10px] uppercase tracking-[0.28em] text-[#566168]">
                 Movement, work, and air
               </p>
               <h2
                 id="day-title"
-                className="mt-3 [font-family:var(--font-display)] text-3xl tracking-tight text-[#272b25] sm:text-4xl"
+                className="mt-3 [font-family:var(--font-display)] text-3xl tracking-tight text-[#232724] sm:text-4xl"
               >
                 A day I know by heart.
               </h2>
             </div>
-            <p className="hidden max-w-40 text-right text-xs leading-5 text-[#596057] sm:block">
-              A two-line record, closer to an actual day.
+            <p className="hidden max-w-44 text-right text-xs leading-5 text-[#5f6967] sm:block">
+              A two-line record that feels closer to an actual life.
             </p>
           </div>
           <DayReel items={dayFrames} />
         </section>
 
+        <section className="mx-auto mt-18 max-w-7xl px-6 sm:mt-24 sm:px-10">
+          <WorldConstants items={constants} />
+        </section>
+
         <section className="mx-auto mt-24 max-w-7xl px-6 sm:mt-32 sm:px-10">
           <div className="grid gap-14 lg:grid-cols-12 lg:gap-x-16">
             <div id="inside" className="scroll-mt-24 lg:col-span-7">
-              <p className="text-[10px] uppercase tracking-[0.28em] text-[#596057]">
+              <p className="text-[10px] uppercase tracking-[0.28em] text-[#566168]">
                 Inside
               </p>
-              <h2 className="mt-4 max-w-xl [font-family:var(--font-display)] text-3xl leading-[1.02] tracking-tight text-[#272b25] sm:text-4xl">
+              <h2 className="mt-4 max-w-xl [font-family:var(--font-display)] text-3xl leading-[1.02] tracking-tight text-[#232724] sm:text-4xl">
                 The room is small enough for concentration.
               </h2>
-              <p className="mt-5 max-w-xl text-base leading-8 text-[#4f554d]">
+              <p className="mt-5 max-w-xl text-base leading-8 text-[#4f5857]">
                 I like a clear desk, a readable plan, and mornings that begin
                 without hurry. The rules are not restrictive. They make the day
                 feel spacious enough to hold both work and life.
               </p>
               <Link
                 href="/case-studies/"
-                className="mt-7 inline-flex border-b border-[#4d554d] pb-1 text-sm text-[#30362f] transition hover:border-transparent"
+                className="mt-7 inline-flex border-b border-[#4d5556] pb-1 text-sm text-[#303637] transition hover:border-transparent"
               >
                 The work lives here too
               </Link>
             </div>
 
             <div id="outside" className="scroll-mt-24 lg:col-span-5">
-              <p className="text-[10px] uppercase tracking-[0.28em] text-[#596057]">
+              <p className="text-[10px] uppercase tracking-[0.28em] text-[#566168]">
                 Outside
               </p>
-              <h2 className="mt-4 [font-family:var(--font-display)] text-3xl leading-[1.02] tracking-tight text-[#272b25] sm:text-4xl">
+              <h2 className="mt-4 [font-family:var(--font-display)] text-3xl leading-[1.02] tracking-tight text-[#232724] sm:text-4xl">
                 The view keeps the plan from becoming too small.
               </h2>
-              <p className="mt-5 text-base leading-8 text-[#4f554d]">
-                Grass, a single tree, a house at a distance, and a line of
-                mountains. The world stays wide even when the day is ordinary.
+              <p className="mt-5 text-base leading-8 text-[#4f5857]">
+                Trees, city edges, museums, a field at distance. The world
+                stays wide even when the structure of the day is ordinary.
               </p>
             </div>
 
-            <div id="night" className="scroll-mt-24 border-t border-[#90968e] pt-8 lg:col-span-12">
+            <div
+              id="night"
+              className="scroll-mt-24 border-t border-white/45 pt-8 lg:col-span-12"
+            >
               <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-[#596057]">
+                  <p className="text-[10px] uppercase tracking-[0.28em] text-[#566168]">
                     At night
                   </p>
                   <p className="mt-3 max-w-xl [font-family:var(--font-display)] text-2xl leading-tight text-[#2f352e] sm:text-3xl">
@@ -208,16 +270,16 @@ export default function Home() {
                     place to begin.
                   </p>
                 </div>
-                <div className="flex gap-5 text-sm text-[#4d554d]">
+                <div className="flex gap-5 text-sm text-[#4d5556]">
                   <Link
                     href="/about/"
-                    className="border-b border-[#777b72] pb-1 transition hover:border-transparent"
+                    className="border-b border-[#7b8281] pb-1 transition hover:border-transparent"
                   >
                     About
                   </Link>
                   <Link
                     href="/resume/"
-                    className="border-b border-[#777b72] pb-1 transition hover:border-transparent"
+                    className="border-b border-[#7b8281] pb-1 transition hover:border-transparent"
                   >
                     Resume
                   </Link>

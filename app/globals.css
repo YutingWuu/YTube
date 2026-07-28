@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --site-bg: #c5cbc5;
+  --site-bg: #d9dddc;
   --site-fg: #20231f;
-  --paper: #c5cbc5;
+  --paper: #d9dddc;
   --ink: #20231f;
   --font-ui: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
   --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
@@ -125,9 +125,11 @@ button {
   position: relative;
   display: block;
   overflow: hidden;
-  background: #7e8279;
+  background: #7b8485;
   color: #f4f1e8;
   flex: none;
+  border-radius: 1.1rem;
+  box-shadow: 0 20px 40px rgba(34, 41, 42, 0.08);
 }
 
 .day-reel-frame--portrait {
@@ -150,7 +152,7 @@ button {
 }
 
 .day-reel-image {
-  filter: saturate(0.82) contrast(0.94);
+  filter: saturate(0.88) contrast(0.95);
   transition: transform 700ms ease, filter 400ms ease;
 }
 
@@ -175,7 +177,7 @@ button {
   inset-inline: 0;
   bottom: 0;
   padding: 3.25rem 1.15rem 1.1rem;
-  background: linear-gradient(180deg, transparent, rgba(19, 23, 19, 0.78));
+  background: linear-gradient(180deg, transparent, rgba(20, 25, 27, 0.8));
   font-size: 0.67rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -194,6 +196,11 @@ button {
   letter-spacing: 0;
   line-height: 1.2;
   text-transform: none;
+}
+
+.day-reel-footnote {
+  border-top: 1px solid rgba(255, 255, 255, 0.34);
+  padding-top: 1rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
