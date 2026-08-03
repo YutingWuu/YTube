@@ -118,9 +118,7 @@ export default function Home() {
               </span>
             </h1>
             <div className="hero-copy mt-7 max-w-[35rem] space-y-2 text-[0.96rem] leading-[1.6] text-white/88 sm:text-[1.02rem]">
-              <p>
-                Let life bloom in a quiet and certain rhythm.
-              </p>
+              <p>Let life bloom in a quiet and certain rhythm.</p>
               <p lang="zh-CN" className="text-white/84">
                 让生活在安静而确定的节奏里绽放。
               </p>
@@ -186,75 +184,88 @@ export default function Home() {
           <div className="border-t border-white/45 pt-8">
             <div className="max-w-4xl">
               <p className="text-[10px] uppercase tracking-[0.28em] text-[#566168]">
-                The Life I Am Learning to Choose
+                The Life I Want to Build
               </p>
               <h2 className="mt-4 [font-family:var(--font-display)] text-3xl leading-[1.02] tracking-tight text-[#232724] sm:text-4xl">
-                The Life I Am Learning to Choose
+                The Life I Want to Build
               </h2>
               <p
                 lang="zh-CN"
                 className="mt-3 [font-family:var(--font-display)] text-2xl leading-tight text-[#3f4848] sm:text-3xl"
               >
-                我正在学着选择的人生
+                我想要建造的人生
               </p>
             </div>
 
             <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16">
               <div className="space-y-6 text-[1.02rem] leading-8 text-[#4f5857]">
                 <p>
-                  For a long time, I thought freedom would arrive as the result
-                  of achievement. A better job, more money, a stronger sense of
-                  security, and one day I would finally feel that my life
-                  belonged to me.
+                  For a long time, I believed freedom was something that had to
+                  be earned through achievement. I imagined that once I had
+                  found a better job, saved more money, and accumulated enough
+                  security, I would finally reach a point at which I could say,
+                  with certainty, that my life belonged to me.
                 </p>
                 <p>
-                  Now I see freedom differently. It is less a destination than
-                  a way of living. It begins when I can hear my own judgment
-                  clearly, make choices without constantly explaining them, and
-                  allow my days to follow a rhythm that feels honest to me.
+                  It took me time to understand that freedom is not a
+                  destination one eventually arrives at. It is a way of
+                  inhabiting one&apos;s life. For me, it begins with the ability
+                  to hear my own judgment clearly, and with no longer feeling
+                  compelled to justify every decision to the people around me.
                 </p>
                 <p>
-                  I still care about work and ambition. I like the quiet
-                  satisfaction of understanding a difficult problem, finding the
-                  structure hidden inside confusion, and turning an idea into
-                  something useful. I want my work to carry both precision and
-                  feeling. I want to understand systems without losing sight of
-                  the people living inside them.
+                  I still care deeply about my career, and I have ambitions of
+                  my own. I find genuine satisfaction in thinking through a
+                  difficult problem until its underlying structure becomes
+                  visible, then turning what was once vague or disordered into
+                  something useful. I want the work I do to be rigorous without
+                  becoming impersonal. Even as I build systems, I want to
+                  remain attentive to the people who must live and make choices
+                  within them.
                 </p>
                 <p>
-                  Perhaps this is why understanding matters so much to me. Each
-                  time I see something more clearly, the world feels less
-                  distant. A pattern in data, a motive behind someone&apos;s
-                  behavior, the reason a relationship changes, the logic beneath
-                  an ordinary decision. Understanding gives shape to experience.
-                  It helps me move through life with greater steadiness, and it
-                  also makes life more vivid.
+                  Perhaps this is why understanding has always mattered so much
+                  to me. Whenever I grasp something more fully, the world feels
+                  a little less remote. It may be a pattern concealed within
+                  data, the motive behind a person&apos;s behaviour, the reason a
+                  relationship has changed, or the logic beneath an apparently
+                  ordinary decision. Understanding gives form to experience. It
+                  allows me to move through life with greater clarity and
+                  confidence. At times, it feels like discovering the
+                  instruction manual after opening a box of unfamiliar
+                  furniture. What first appeared fragmented and confusing
+                  gradually becomes coherent.
                 </p>
                 <p>
-                  I want to create for the same reason. Creation is my way of
-                  answering the world. It may become a product, an image, a
-                  piece of writing, or simply a thought expressed at the right
-                  moment. Its meaning lies in whether it reaches another person
-                  and leaves behind a small change in how they see, feel, or
-                  choose.
+                  My desire to create comes from the same place. Creation is
+                  how I enter into conversation with the world. It may take the
+                  form of a product, an image, a piece of writing, or simply an
+                  idea expressed at the right moment. Its value lies in whether
+                  it reaches another person and leaves some trace, however
+                  subtle, in the way they see, feel, or choose.
                 </p>
                 <p>
-                  The life I hope to build has room for all of this. Focused
-                  work, a healthy body, clear and mutual relationships, quiet
-                  mornings, good food, travel, beauty, and time that still
-                  feels like my own. I do not need every day to be remarkable. I
-                  only want to feel present inside it.
+                  The life I hope to build must be spacious enough to contain
+                  all of this: work worthy of sustained attention, a healthy
+                  body that allows me to move freely, relationships defined by
+                  clarity and mutual care, quiet mornings, good food,
+                  restorative travel, and time that remains genuinely mine.
                 </p>
                 <p>
-                  In the end, the life I want is simple to describe. I want to
-                  understand the world more deeply, contribute something that
-                  carries my own voice, and remain awake to the life unfolding
-                  around me.
+                  I do not need every day to be extraordinary. I only want to
+                  be fully present within my own life, rather than watching it
+                  pass by at the edges of my attention.
+                </p>
+                <p>
+                  Ultimately, what I want is simple. I want to understand the
+                  world more deeply, leave behind something that carries the
+                  imprint of my own voice, and remain awake to the life
+                  unfolding before me.
                 </p>
                 <p className="[font-family:var(--font-display)] text-[1.28rem] leading-8 text-[#2f3738]">
-                  Freedom gives me the space to become myself. Understanding
-                  teaches me how to live. Creation allows a part of me to
-                  remain.
+                  Freedom gives me the room to become myself. Understanding
+                  teaches me how to live. Creation allows some part of me to
+                  endure.
                 </p>
               </div>
 
@@ -263,46 +274,56 @@ export default function Home() {
                 className="space-y-6 border-t border-white/35 pt-1 text-[1.02rem] leading-8 text-[#4f5857] lg:border-t-0 lg:border-l lg:border-white/35 lg:pl-16 lg:pt-0"
               >
                 <p>
-                  很长一段时间里，我以为自由会在某种成就之后到来。找到更好的工作，
-                  拥有更多财富，积累足够的安全感，直到某一天，我终于能够确定，
-                  这一生真正属于我自己。
+                  在很长一段时间里，我以为自由是要等到某个成就达成之后，
+                  才会出现的东西。等我找到更好的工作，攒下更多的钱，积累
+                  足够的安全感。直到那一天，我才可以确定，这一生真正属于
+                  我自己。
                 </p>
                 <p>
-                  后来我逐渐意识到，自由并不是终点，而是一种生活方式。它始于我能够
-                  听清自己的判断，不再需要为每一个选择反复解释，也能够让生活按照一
-                  种诚实、舒展的节奏向前展开。
+                  可后来我才慢慢明白，自由不是某个终点，而是一种活着的方
+                  式。它始于我能够听清自己内心的判断，不再需要为每一个选
+                  择，反复向别人解释。
                 </p>
                 <p>
-                  我依然在意事业，也依然有野心。我喜欢理解一个复杂问题时那种安静的
-                  满足感，喜欢从混乱中找到结构，再把模糊的想法变成真正有用的东西。
-                  我希望自己的工作既有精确的逻辑，也保留对人的感受。理解系统的同
-                  时，我不想忘记生活在系统中的人。
+                  我仍然在意自己的事业，也有着自己的野心。我喜欢把一个复
+                  杂的问题真正想明白时的满足感，喜欢从混乱中解析出结构，
+                  再把一个模糊的想法做成真正有用的东西。我希望自己做的事
+                  既合乎逻辑，也不丢掉对人的体贴和关切。做成一个系统的同
+                  时，我不想忘记那些生活在系统里的人。
                 </p>
                 <p>
-                  也许正因如此，理解对我而言格外重要。每当我看清一件事，世界就离我
-                  更近一点。数据中的规律，一个人行为背后的动机，一段关系发生变化的
-                  原因，或者某个普通选择之下隐藏的逻辑。理解让经验有了形状，也让我
-                  能够更稳定地行走于生活之中。更重要的是，它让世界变得具体而鲜明。
+                  也许正因为这样，“理解”对我才格外重要。每理解一件事，
+                  我就觉得世界离我近了一点。数据里的规律，一个人做某件事
+                  背后的动机，一段关系为什么会发生变化，或者一个再普通不
+                  过的选择之下藏着的逻辑。理解让经验有了形状，也让我在生
+                  活里走得更远。它像拆开一件新家具后找到的组装说明书，让
+                  整个世界逐渐变得清晰而有序。
                 </p>
                 <p>
-                  我想要创造，也是出于同样的原因。创造是我回应世界的方式。它可以是
-                  一件产品、一幅图像、一段文字，也可以是在恰当的时刻，被准确表达出
-                  来的一个想法。它真正的意义，在于是否抵达了另一个人，并悄悄改变了
-                  对方看待、感受或选择事物的方式。
+                  我想去创造，也是出于同样的原因。创造是我回应这个世界的
+                  方式。它可以是一件产品、一张图、一段文字，也可以只是
+                  在关键时刻出现的一个想法。它真正有没有意义，要看它是否
+                  抵达了另一个人，并悄悄改变了那个人看待、感受或选择事物
+                  的方式。
                 </p>
                 <p>
-                  我希望建立的生活，可以容纳这一切。专注而有价值的工作，健康自由的
-                  身体，清晰而相互的关系，安静的早晨，好吃的食物，旅行，美，以及仍
-                  然真正属于自己的时间。我不需要每一天都显得精彩，只希望自己始终身
-                  处其中，而不是匆忙地从生活旁边经过。
+                  我想过的生活，得能装得下这一切：值得投入、让人专注的工
+                  作，健康而自由的身体，清楚而彼此在意的关系，安静的早晨，
+                  美味的食物，一段心情舒畅的旅行，还有仍然真正归我自己支
+                  配的时间。
                 </p>
                 <p>
-                  归根结底，我想要的人生并不复杂。我想更深地理解这个世界，留下带有
-                  自己声音的东西，也始终对正在发生的生活保持清醒。
+                  我不需要每一天都过得精彩，只希望自己真正浸入生活，而不
+                  是让它从身边匆匆流逝。
+                </p>
+                <p>
+                  说到底，我想要的人生其实并不复杂。我想对这个世界理解得
+                  更深一点，留下一些带着自己声音的东西，也始终对正在发生
+                  的生活保持清醒。
                 </p>
                 <p className="[font-family:var(--font-display)] text-[1.28rem] leading-8 text-[#2f3738]">
-                  自由让我有空间成为自己，理解教会我如何生活，而创造，让我的一部分
-                  得以停留。
+                  自由让我有空间成为自己，理解教会我如何生活，而创造，让
+                  我的一部分得以留下来。
                 </p>
               </div>
             </div>
