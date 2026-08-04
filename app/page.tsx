@@ -2,6 +2,8 @@ import Link from "next/link";
 import DayReel from "@/components/day-reel";
 import { withBasePath } from "@/lib/site";
 
+const resumePdfHref = withBasePath("/Yuting_Wu_Resume_UA.pdf");
+
 const dayFrames = [
   {
     time: "07:05",
@@ -145,7 +147,7 @@ export default function Home() {
               <IconLink href="/case-studies/" label="Work">
                 <BriefcaseIcon />
               </IconLink>
-              <IconLink href="/resume/" label="Resume">
+              <IconLink href={resumePdfHref} label="Resume">
                 <DocumentIcon />
               </IconLink>
               <IconLink href="mailto:t112255zl@gmail.com" label="Contact">
@@ -342,7 +344,7 @@ export default function Home() {
                 Work
               </Link>
               <Link
-                href="/resume/"
+                href={resumePdfHref}
                 className="border-b border-[#7b8281] pb-1 transition hover:border-transparent"
               >
                 Resume
@@ -372,6 +374,21 @@ function IconLink({
   if (href.startsWith("mailto:")) {
     return (
       <a href={href} aria-label={label} className={className}>
+        <span className={shellClassName}>{children}</span>
+        <span>{label}</span>
+      </a>
+    );
+  }
+
+  if (href.endsWith(".pdf")) {
+    return (
+      <a
+        href={href}
+        aria-label={label}
+        target="_blank"
+        rel="noreferrer"
+        className={className}
+      >
         <span className={shellClassName}>{children}</span>
         <span>{label}</span>
       </a>

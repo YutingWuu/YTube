@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { withBasePath } from "@/lib/site";
 
 const navLinks = [
   { href: "/", label: "About" },
   { href: "/case-studies/", label: "Work" },
-  { href: "/resume/", label: "Resume" },
+  { href: withBasePath("/Yuting_Wu_Resume_UA.pdf"), label: "Resume", external: true },
 ];
 
 const brandClassName =
@@ -39,13 +40,25 @@ export default function SiteShell({
             </Link>
             <div className={`pointer-events-auto ${navGroupClassName}`}>
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={navLinkClassName}
-                >
-                  {link.label}
-                </Link>
+                link.external ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={navLinkClassName}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={navLinkClassName}
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
             </div>
           </nav>
@@ -68,13 +81,25 @@ export default function SiteShell({
           </Link>
           <div className={navGroupClassName}>
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={navLinkClassName}
-              >
-                {link.label}
-              </Link>
+              link.external ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={navLinkClassName}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={navLinkClassName}
+                >
+                  {link.label}
+                </Link>
+              )
             ))}
           </div>
         </nav>
