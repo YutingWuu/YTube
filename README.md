@@ -66,3 +66,24 @@ git push origin main
 - Resume page: `app/resume/page.tsx`
 - Styling: `app/globals.css`
 - Contact details: search for `t112255zl@gmail.com`
+
+## Google Analytics 4
+
+This project supports GA4 pageview tracking and resume download tracking.
+
+1. Create a GA4 web data stream and copy your Measurement ID.
+2. In GitHub, open **Settings -> Secrets and variables -> Actions**.
+3. Add a repository secret named `NEXT_PUBLIC_GA_MEASUREMENT_ID`.
+4. Set the value to something like `G-XXXXXXXXXX`.
+5. Push to `main` or rerun the GitHub Pages workflow to rebuild the static site.
+
+For local testing, copy `.env.example` to `.env.local` and set:
+
+```bash
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+```
+
+Tracked events:
+
+- Automatic page views across the site
+- `resume_download` when the PDF resume button is clicked

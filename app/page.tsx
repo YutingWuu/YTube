@@ -139,7 +139,7 @@ export default function Home() {
 
           <div className="mt-auto flex justify-end pt-14">
             <div className="hero-dock flex flex-wrap items-start justify-end gap-3 sm:gap-4">
-              <IconLink href="/about/" label="About">
+              <IconLink href="/" label="About">
                 <CirclePersonIcon />
               </IconLink>
               <IconLink href="/case-studies/" label="Work">
@@ -330,7 +330,7 @@ export default function Home() {
 
             <div className="mt-10 flex gap-5 text-sm text-[#4d5556]">
               <Link
-                href="/about/"
+                href="/"
                 className="border-b border-[#7b8281] pb-1 transition hover:border-transparent"
               >
                 About
